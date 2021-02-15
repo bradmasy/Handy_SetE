@@ -16,7 +16,7 @@ Technologies used for this project:
 * ...
 	
 ## Content
-Content of the project folder:
+Contents of the project folder:
 
 ```
  Top level of project folder: 
