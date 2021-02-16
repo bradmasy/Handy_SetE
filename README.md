@@ -6,7 +6,8 @@
 
 ## General Info
 This browser based web application to ...
-Hoda Rashedi Demo for Tuesday Lab.
+
+Hoda Rashedi Demo for Tuesday Lab. This is the test
 	
 ## Technologies
 Technologies used for this project:
