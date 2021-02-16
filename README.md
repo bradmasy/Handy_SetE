@@ -5,7 +5,7 @@
 * [Contents](#content)
 
 ## General Info
-Eric and Brad say hello!
+Eric and Brad say hello! 1800
 
 ## Technologies
 Technologies used for this project:
