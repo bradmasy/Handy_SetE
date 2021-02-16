@@ -8,6 +8,7 @@
 This browser based web application to ...
 
 brad has changed this for lab
+brad has changed the index for lab
 	
 ## Technologies
 Technologies used for this project:
