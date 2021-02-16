@@ -5,11 +5,8 @@
 * [Contents](#content)
 
 ## General Info
-This browser based web application to ...
 
-brad has changed this for lab
-brad has changed the index for lab
-hello
+this is the new info
 	
 ## Technologies
 Technologies used for this project:
