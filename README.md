@@ -7,6 +7,12 @@
 ## General Info
 Eric Choi says hello!
 
+<<<<<<< HEAD
+=======
+brad has changed this for lab
+brad has changed the index for lab
+	
+>>>>>>> b95aeec975aa1d87cdf6f08b9139fe32a8c7c844
 ## Technologies
 Technologies used for this project:
 * HTML, CSS
