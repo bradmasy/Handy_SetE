@@ -7,9 +7,9 @@
 ## General Info
 This browser based web application to ...
 
-Hoda Rashedi Demo for Tuesday Lab. This is the test
+Hoda Rashedi Demo for Tuesday Lab.
 
-This is the second try for creating conflict from Hoda Rashedi - Demo
+This is for creating conflict.
 
 	
 ## Technologies
