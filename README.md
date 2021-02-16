@@ -8,9 +8,6 @@
 This browser based web application to ...
 
 Hoda Rashedi Demo for Tuesday Lab. This is the test
-
-This is the second try for creating conflict from Hoda Rashedi - Demo
-
 	
 ## Technologies
 Technologies used for this project:
