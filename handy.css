@@ -1,0 +1,34 @@
+#handy {
+   
+    margin-left: 50px;
+}
+
+#welcome {
+    position: relative;
+    margin-top: 30px;
+    width:475px;
+    left: 30%;
+}
+
+#welcomeback{
+    margin: auto;
+    position:relative;
+    text-align: center;
+    height: 200px;
+    width: 75%;
+}
+#welcome2 {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width:600px;
+    left: 23%;
+}
+
+#centreText{
+    text-align: center;
+}
+
+
+
+
