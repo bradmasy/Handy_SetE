@@ -6,7 +6,7 @@
 #welcome {
     position: relative;
     margin-top: 30px;
-    width:475px;
+    width:25%;
     left: 30%;
 }
 
@@ -14,9 +14,10 @@
     margin: auto;
     position:relative;
     text-align: center;
+    border: solid black 2px;
     height: 200px;
     width: 75%;
-}
+} 
 #welcome2 {
     position: relative;
     margin-top: 30px;
@@ -29,6 +30,14 @@
     text-align: center;
 }
 
+#button1 {
+}
 
-
+img {
+    width: 50% !important;
+    height:50% !important;
+    padding-top:20px;
+    position: relative;
+    margin: auto;
+}
 

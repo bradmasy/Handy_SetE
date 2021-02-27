@@ -6,9 +6,9 @@
 
 ## General Info
 
-this is the new info
-	
-Eric and Brad say hello! 1800
+Edit log:
+
+- brad edited main/landing index feb 27 2021
 
 ## Technologies
 Technologies used for this project:
