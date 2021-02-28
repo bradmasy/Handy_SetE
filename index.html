@@ -6,15 +6,44 @@
     <title>My BCIT Project</title>
     <meta name="comp1800 boilerplate code" content="my bcit Lab Demo Test">
     <meta name="author" content="BCIT">
-    <link rel="stylesheet" href="./handy.css" />
+
 
     <!-- Bootstrap for Mobile-first, and JQuery -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-    <!-- Optional styles and scripts of your own -->
+    <style>
+        .card-img-top {
+            width: 100%;
+            height: 40vh;
+            margin: auto;
+        }
+
+        #welcome {
+            height: 80vh;
+            width: 100%;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 64px;
+            transform: translate(-50%, -50%);
+            margin-bottom: 20px;
+        }
 
 
+        #handy {
+            width: 40%;
+            height: 50%;
+        }
+
+        #spacing {
+            width:100%;
+            height:30vh;
+        }
+    </style>
 </head>
 
 <body class="p-3 mb-2 bg-light text-dark">
@@ -25,11 +54,9 @@
     <!-- Header Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
         <a class="navbar-brand" href="./index.html">
-            <div id="handy">
-                <h1>Handy</h1>
-                
+            <div id="textbox">
+                <img id="handy" src="./Handy (1).png">
             </div>
-         
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
             <span class="navbar-toggler-icon"></span>
@@ -56,49 +83,36 @@
                     <a class="nav-link" href="login.html">Sign Up/Login</a>
                 </li>
             </ul>
-            
-
-            
-                <form class="form-inline">
-                    <input class="form-control sm-sm-1" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
 
 
 
-                  
-            
-            
+            <form class="form-inline">
+                <input class="form-control sm-sm-1" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+
         </div>
     </nav>
 
-
-
-
-
-
-    <img src="./purepng.com-business-manbusinessmanbusinesssalesrevenuegenerating-142152683810178qqd.png" id="business">
-
-    
-    <div id="welcomeback">
+    <div>
         <!-- <div id="welcome">-->
-     
-            <h1 class="display-4"><b>Welcome to Handy!</b></h1>
-        
-
+        <img src="./pexels-fauxels-3184465.jpg" id="welcome">
+      
+        <div class="centered"><b>Welcome to Handy!</b></div>
     </div>
-
+<div id="spacing"></div>
     <div class="card-deck">
 
         <div class="card">
             <div class="text-center">
-                <h5 class="card-title">Find your passion</h5>
             </div>
-            <img class="card-img-top" src="./businessman-icon-7.png" alt="Card image cap">
+            <img class="card-img-top" src="./pexels-andrea-piacquadio-927022.jpg" Card image cap">
             <div class="p-3 mb-2 bg-success text-white">
 
                 <div class="card-body">
                     <div class="text-center">
-                        <h5 class="card-title">Connect with career driven employers</h5>
+                        <h5 class="card-title">Connect </h5>
+                        <p> Meet local business owners</p>
+                        <a href="#" class="btn btn-light">Make a profile today</a>
                     </div>
                     <p class="card-text"></p>
 
@@ -107,13 +121,14 @@
         </div>
         <div class="card">
             <div class="text-center">
-                <h5 class="card-title">Find your passion</h5>
             </div>
-            <img class="card-img-top" src="./download.png" alt="Card image cap">
+            <img class="card-img-top" src="./pexels-sebastian-coman-photography-3437689.jpg" alt="Card image cap">
             <div class="p-3 mb-2 bg-success text-white">
                 <div class="card-body">
                     <div class="text-center">
                         <h5 class="card-title">Find your passion</h5>
+                        <p>Try something new </p>
+                        <a href="#" class="btn btn-light">Explore Opportunities</a>
                     </div>
                     <div class="cardtext">
                         <p class="card-text">
@@ -124,13 +139,15 @@
         </div>
         <div class="card">
             <div class="text-center">
-                <h5 class="card-title">Find your passion</h5>
+
             </div>
-            <img class="card-img-top" src="./1611179.png" alt="Card image cap">
+            <img class="card-img-top" src="./pexels-pixabay-534229.jpg" alt="Card image cap">
             <div class="p-3 mb-2 bg-success text-white">
                 <div class="card-body">
                     <div class="text-center">
                         <h5 class="card-title">Earn on your free time</h5>
+                        <p>Earn when you want</p>
+                        <a href="#" class="btn btn-light">Search Jobs</a>
                     </div>
                     <div class="cardtext">
                         <p class="card-text">
@@ -142,62 +159,9 @@
 
     </div>
 
-    <!--
-  
-    <div class="container">
-        <div class="card-group">
-            <div class="card">
-                <img src="./businessman-icon-7.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <div class="text-center">
-                        <h5 class="card-title">Work when you want</h5>
-                    </div>
-                    <div class="text-center">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional
-                            content. This content is a little bit longer.</p>
-                    </div>
-                    <div class="text-center"><button type="button" class="btn btn-success btn-sm">Small button</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="card">
-                <img src="./1611179.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <div class="text-center">
-                        <h5 class="card-title">Make spare money when you can</h5>
-                    </div>
-                    <div class="text-center">
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                            content.
-                        </p>
-                    </div>
-                    <div class="text-center"><button type="button" class="btn btn-success btn-sm">Small button</button>
-                    </div>
-                </div>
 
-            </div>
-            <div class="card">
-                <img src="download.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <div class="text-center">
-                        <h5 class="card-title">Find another passion</h5>
-                    </div>
-                    <div class="text-center">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional
-                            content. This card has even longer content than the first to show that equal height action.
-                        </p>
-                    </div>
-                </div>
-                    <div class="text-center"><button type="button" class="btn btn-success btn-sm">Small button</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
--->
+
 
 
     <!----------------------------------------------->
