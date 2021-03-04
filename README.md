@@ -10,6 +10,7 @@ Edit log:
 
 - brad edited main/landing index feb 27 2021
 - brad editied main/landing page, added photos feb 27, 2021
+- brad organized the folders(images in images folder now) march 3rd 2021
 
 ## Technologies
 Technologies used for this project:
