@@ -17,3 +17,14 @@ h1 {
     height: 5vh !important;
     width: 5vw !important;
 }
+
+/* styling for abouthandy.html*/
+
+#about {
+  height: 30vh;
+    background-color: orange;
+}
+#about h1 {
+    font-size: 64px;
+    text-align: center;
+}
