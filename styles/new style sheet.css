@@ -3,3 +3,17 @@
     height: 15vw;
     object-fit: cover;
 }
+h1 {
+    text-align: center;
+    margin-top:40px;
+    margin-bottom:60px;
+}
+
+.btn {
+    text-align: center;
+}
+
+#handy2 {
+    height: 5vh !important;
+    width: 5vw !important;
+}
