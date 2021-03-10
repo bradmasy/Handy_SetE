@@ -177,7 +177,7 @@
     </div>
 
 
-
+    <h1>message:<span id="helloMessage"></span></h1>
 
 
 
@@ -204,6 +204,21 @@
 <!-- JS files: Your own JavaScript functions included here    -->
 <!--------------------------------------------------------------------->
 
+<script>const db = firebase.firestore(); </script>//add this to read/write
+
+<script>
+    function readQuote(){
+     db.collection("messages").doc("tuesday").onSnapshot(function(snap){
+         console.log(snap.data());
+         document.getElementById("quote-goes-here").innerHTML = snap.data().message;
+     })
+ }
+ readQuote();
+ 
+ </script>
+
+
 </body>
+
 
 </html>
