@@ -36,7 +36,7 @@
         }
 
 
-        #handy {
+        .handy {
             width: 40%;
             height: 50%;
         }
@@ -61,7 +61,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="./index.html">
             <div id="textbox">
-                <img id="handy" src="./images/Handy (1).png">
+                <img class="handy" src="./images/Handy (1).png">
 
             </div>
         </a>
@@ -121,14 +121,14 @@
         <div class=" bg-info card">
             <div class="text-center">
             </div>
-            <img class="card-img-top" src="./images/pexels-andrea-piacquadio-927022.jpg" Card image cap">
+            <img class="card-img-top" src="./images/pexels-andrea-piacquadio-927022.jpg" alt= "Card image cap">
             <div class="p-3 mb-2 bg-primary text-white">
 
                 <div class="card-body">
                     <div class="text-center">
                         <h5 class="card-title">Connect </h5>
                         <p> Meet local business owners</p>
-                        <a href="#" class="btn btn-light">Make a profile today</a>
+                        <a href="./profile.html" class="btn btn-light">Make a profile today</a>
                     </div>
                     <p class="card-text"></p>
 
@@ -145,7 +145,7 @@
                     <div class="text-center">
                         <h5 class="card-title">Find your passion</h5>
                         <p>Try something new </p>
-                        <a href="#" class="btn btn-light">Explore Opportunities</a>
+                        <a href="./About Handy.html" class= "btn btn-light">Explore Opportunities</a>
                     </div>
                     <div class="cardtext">
                         <p class="card-text">
@@ -164,7 +164,7 @@
                     <div class="text-center">
                         <h5 class="card-title">Earn on your free time</h5>
                         <p>Earn when you want</p>
-                        <a href="#" class="btn btn-light">Search Jobs</a>
+                        <a href="./jobsearch.html" class="btn btn-light">Search Jobs</a>
                     </div>
                     <div class="cardtext">
                         <p class="card-text">
@@ -176,9 +176,10 @@
 
     </div>
     <!-- Footer -->
-    <nav class="navbar fixed-bottom navbar-light bg-light">
+    <nav class="navbar fixed-bottom navbar-light bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"> Handy </a>
+        <a class="navbar-brand" href="./index.html"><div><img class="handy" src="./images/Handy (1).png"></div></a>
+    
       </div>
     </nav>
 
@@ -209,19 +210,14 @@
 <!-- JS files: Your own JavaScript functions included here    -->
 <!--------------------------------------------------------------------->
 
-<script>const db = firebase.firestore(); </script>//add this to read/write
 
-<script>
-    function readQuote(){
-     db.collection("messages").doc("tuesday").onSnapshot(function(snap){
-         console.log(snap.data());
-         document.getElementById("quote-goes-here").innerHTML = snap.data().message;
-     })
- }
- readQuote();
- 
- </script>
 
+<nav class="navbar fixed-bottom navbar-light bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html"><div><img class="handy" src="./images/Handy (1).png"></div></a>
+  
+    </div>
+  </nav>
 
 </body>
 
