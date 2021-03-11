@@ -13,6 +13,7 @@ Edit log:
 - brad organized the folders(images in images folder now) march 3rd 2021
 - will is working on about handy page
 - brad updated footer color & links in cards march 9th 2021
+- brad working on job search page
 
 ## Technologies
 Technologies used for this project:

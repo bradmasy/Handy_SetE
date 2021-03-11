@@ -219,17 +219,6 @@
     </script>
     
 
-<script>
-    function readQuote(){
-     db.collection("messages").doc("tuesday").onSnapshot(function(snap){
-         console.log(snap.data());
-         document.getElementById("quote-goes-here").innerHTML = snap.data().message;
-     })
- }
- readQuote();
- 
- </script>
-
 
 
 
