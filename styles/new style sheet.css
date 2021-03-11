@@ -11,6 +11,7 @@ h1 {
 
 .btn {
     text-align: center;
+
 }
 
 #handy2 {
@@ -29,11 +30,22 @@ h1 {
     text-align: center;
 }
 h1 {
+    color: black;
     margin-top: 5vh;
 }
 
 #empOremp {
-    height: 5%;
+    height:75vh;
     width:100%;
     text-align: center;
 }
+
+.spaced {
+    height: 10vh;
+    width: 100%;
+}
+
+body {
+    height:200vh;
+}
+

@@ -22,7 +22,7 @@
         }
 
         #welcome {
-            height: 5%;
+            height: 100vh;
             width: 100%;
         }
 
@@ -50,8 +50,6 @@
         div img {
             height: 10%;
         }
-
-       
     </style>
 </head>
 
@@ -107,38 +105,74 @@
         </div>
     </nav>
 
-    <h1 style="text-align: center;">Job Search</h1>
+
+
+
+
+
+    <div class="d-flex flex-column">
+        <div class="p-2"><h1 class="display-4" style="background-color: lightblue;">Job Board</h1></div>
+        <div class="p-2"><h1 class="text-left display-4">
+            <b>Looking for that new job<br> 
+            Have some free time to burn?<br>
+            Take a look to
+            see whats out there now!</b></h1>
+
+    <div class="text-center"><a href="./Signup.html" class="btn btn-primary" role="button">Sign Up</a>
+        <a href="/Signup.html" class="btn btn-primary" role="button">Login</a></div>
+    
+
+
+        <div class="p-2"><h1 class="display-4">Job Search Form</h1></div>
+        <div class="p-2"> <div id="jobForm">
+            <input class="form-control form-control-lg" type="text" placeholder="Location">
+            <select class="form-control form-control-lg" placeholder="Job Field">
+                <option>Job Field</option>
+                <option>Medical</option>
+                <option>Hospitality</option>
+                <option>Service</option>
+                <option>Trades</option>
+            </select>
+            <input class="form-control form-control-lg" type="text" placeholder="Job Title">
+            <select class="form-control form-control-lg" placeholder="Job Field">
+                <option>Salary</option>
+                <option>$20,000 - $30,000</option>
+                <option>$30,000 - $40,000</option>
+                <option>$40,000 - $50,000</option>
+                <option>$50,000 - $60,000</option>
+                <option>$60,000 - $70,000</option>
+                <option>$70,000 - $80,000</option>
+                <option>$80,000 - $90,000</option>
+                <option>$90,000 - $100,000</option>
+                <option>$100,000 +</option>
+    
+            </select>
+            <div class="form-group">
+    
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="your@emailaddress.com">
+            </div>
+            <div class="text-center">
+                <button type="button" class="btn btn-primary btn-lg">Submit Form</button>
+            </div>
+    
+        </div>
+
+
+
+        </div>
+      </div>
+
+
+
+    
+</div>
+
+
+
+
     <!--Job Information Form-->
-    <div id="jobForm">
-        <input class="form-control form-control-lg" type="text" placeholder="Location">
-        <select class="form-control form-control-lg" placeholder="Job Field">
-            <option>Job Field</option>
-            <option>Medical</option>
-            <option>Hospitality</option>
-            <option>Service</option>
-            <option>Trades</option>
-          </select>
-          <input class="form-control form-control-lg" type="text" placeholder="Job Title">
-          <select class="form-control form-control-lg" placeholder="Job Field">
-            <option>Salary</option>
-            <option>$20,000 - $30,000</option>
-            <option>$30,000 - $40,000</option>
-            <option>$40,000 - $50,000</option>
-            <option>$50,000 - $60,000</option>
-            <option>$60,000 - $70,000</option>
-            <option>$70,000 - $80,000</option>
-            <option>$80,000 - $90,000</option>
-            <option>$90,000 - $100,000</option>
-            <option>$100,000 +</option>
-        
-          </select>
-          <div class="form-group">
-            
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-          </div>
-          <button type="button" class="btn btn-primary btn-lg">Submit Form</button>
-    </div>
    
+
 
     <!-- Footer -->
     <nav class="navbar fixed-bottom navbar-light bg-primary">
