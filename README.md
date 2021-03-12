@@ -14,6 +14,7 @@ Edit log:
 - will is working on about handy page
 - brad updated footer color & links in cards march 9th 2021
 - brad working on job search page
+- brad working on profile page
 
 ## Technologies
 Technologies used for this project:

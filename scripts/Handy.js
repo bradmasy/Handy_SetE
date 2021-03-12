@@ -12,5 +12,7 @@
   const db = firebase.firestore(); 
 
 
+  // javascript for index.html
+
 
   
