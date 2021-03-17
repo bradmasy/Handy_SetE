@@ -13,46 +13,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="icon" type="image/png" href="images/coffee.png">
 
-    <style>
-        .card-img-top {
-            width: 100%;
-            height: 40vh;
-            margin: auto;
-        }
-
-        #welcome {
-            height: 5%;
-            width: 100%;
-        }
-
-        .centered {
-            position: absolute;
-            top: 70%;
-            left: 50%;
-            font-size: 64px;
-            color: black;
-            transform: translate(-50%, -50%);
-            margin-bottom: 20px;
-        }
-
-
-        .handy {
-            width: 40%;
-            height: 50%;
-        }
-
-        #spacing {
-            width: 100%;
-            height: 20vh;
-        }
-
-        div img {
-            height: 10%;
-        }
-    </style>
+    
 </head>
 
-<body class="p-3 mb-2 bg-info text-dark">
+<body class="p-3 mb-2 bg-light text-dark">
 
     <!-------------------------------------->
     <!-- The following is HTML for layout -->
@@ -105,9 +69,8 @@
     </nav> 
 
     <div class="container">
-        <h1 class="display-4">hello, welcome to Handy</h1>
-        <h1>you are now logged in</h1>
-        <h1>here is your quote of the day: <span id="quote-goes-here"></span></h1>
+        <h1 class="display-4">You are Now logged in</h1>
+        <h2><span id="quote-goes-here"></span></h2>
     </div>
 
 
@@ -120,34 +83,23 @@ integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOn
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
-<script src="scripts/Handy.js"></script>
+<script src="./scripts/Handy_api_key.js"></script>
 <script>
-    
-</script>
-<script src="./scripts/Handy.js"></script>
-<script src="./scripts/readquote.js"></script>
-
-<script>
-
-
-</script>
-
-
-
-
-
-
-
-
-<script>
-
     function readQuote(){
-     db.collection("messages").doc("tuesday").onSnapshot(function(snap){
-         console.log(snap.data());
-         document.getElementById("quote-goes-here").innerHTML = snap.data().message;
-     })
- }
- </script>
+    db.collection("messages").doc("tuesday")
+    .onSnapshot(function(snap){
+        console.log(snap.data());
+        document.getElementById("quote-goes-here").innerHTML = snap.data().message;
+    })
+}
+readQuote();
+</script>
+
+
+
+
+ 
+ 
 
 
 

@@ -3,28 +3,20 @@
     height: 15vw;
     object-fit: cover;
 }
-h1 {
-    text-align: center;
-    margin-top:40px;
-    margin-bottom:60px;
-}
+
 
 .btn {
     text-align: center;
-
 }
 
-#handy2 {
-    height: 5vh !important;
-    width: 5vw !important;
+.d-block{
+    opacity: 0.6;
 }
+
 
 /* styling for abouthandy.html*/
 
-#about {
-  height: 30vh;
-    background-color: orange;
-}
+
 #about h1 {
     font-size: 64px;
     text-align: center;
@@ -62,4 +54,8 @@ div img {
 .carousel-item {
     margin-top: 50px;
 
+}
+
+.img-fluid {
+    height: 25vh;
 }

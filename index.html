@@ -1,250 +1,147 @@
 <!DOCTYPE html>
 <html>
+   <head>
+      <meta charset="utf-8">
+      <title>Handy</title>
+      <meta name="Handy Freelance" content="Handy Freelance">
+      <meta name="author" content="Handy">
+      <!-- Bootstrap for Mobile-first, and JQuery -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-    <meta charset="utf-8">
-    <title>Handy</title>
-    <meta name="Handy Freelance" content="Handy Freelance">
-    <meta name="author" content="Handy">
-
-
-    <!-- Bootstrap for Mobile-first, and JQuery -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="icon" type="image/png" href="images/coffee.png">
-
-    <style>
-        .card-img-top {
-            width: 100%;
-            height: 40vh;
-            margin: auto;
-        }
-
-        #welcome {
-            height: 100vh;
-            width: 100%;
-        }
-
-        .centered {
-            position: absolute;
-            top: 70%;
-            left: 50%;
-            font-size: 64px;
-            color: black;
-            transform: translate(-50%, -50%);
-            margin-bottom: 20px;
-        }
-
-
-        .handy {
-            width: 40%;
-            height: 50%;
-        }
-
-        #spacing {
-            width: 100%;
-            height: 20vh;
-        }
-
-        div img {
-            height: 10%;
-        }
-
-        .carousel-item {
-            margin-top: 50px;
-
-
-        }
-    </style>
-</head>
-
-<body class="p-3 mb-2 bg-info text-dark">
-
-    <!-------------------------------------->
-    <!-- The following is HTML for layout -->
-    <!-------------------------------------->
-    <!-- Header Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="./index.html">
-            <div id="textbox">
-                <img class="handy" src="./images/Handy (1).png">
-
-            </div>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">  
+      
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="icon" type="image/png" href="images/coffee.png">
+      <link rel="stylesheet" href="./styles/new style sheet.css">
+      </style>
+   </head>
+   <body class="p-3 mb-2 bd-light text-dark">
+      <!-------------------------------------->
+      <!-- The following is HTML for layout -->
+      <!-------------------------------------->
+      <!-- Header Navigation Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+         <a class="navbar-brand" href="./index.html">
+         </a>
+         <a class="navbar-brand ml-5" href="./index.html">
+            <img src="./images/Handy (1).png" width="90" height="40" alt="">
+            </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="./index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./About Handy.html">About Handy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="jobsearch.html">Job Board</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="profile.html">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./blog.html">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./contact_us.html">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Signup.html">Sign Up/Login</a>
-                </li>
-
+               <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./About Handy.html">About Handy</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="jobsearch.html">Job Board</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="profile.html">Profile</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./blog.html">Blog</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./contact_us.html">Contact Us</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="Signup.html">Sign Up/Login</a>
+               </li>
             </ul>
-
-
-
             <form class="form-inline">
-                <input class="form-control sm-sm-1" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control sm-sm-1" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+         </div>
+      </nav>
 
+       <div class="d-flex justify-content-center align-items-center" style ="background-image: url('https://media-private.canva.com/MABAgm6RHE8/1/screen_2x.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJWF6QO3UH4PAAJ6Q%2F20210315%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210315T103152Z&X-Amz-Expires=78718&X-Amz-Signature=bbb9d0e527c507c738824398457aaefb9fb465b9868d0f675bfd5cdc4b07f0ba&X-Amz-SignedHeaders=host&response-expires=Tue%2C%2016%20Mar%202021%2008%3A23%3A50%20GMT'); height: 50vh;">
+            <div class="mask" style="background-color: rgba(250 , 250, 250, 0.1)">
+               <div class="d-flex justify-content-center align-items-center h-100">
+                  <h1 class="text-white text-center mb-0">Welcome To Handy</h1>
+               </div>
+           </div>
+       </div>
+
+      <div class="text-center my-5">
+            <div class="display-4"><b>Welcome to Handy</b><br>
+                <div class="display-6">Freelance employment services</div>
+                <div class="h6 m-4"><i>when you need a hand, were here</i></div>
+                <div><img src='./images/Handy Logo canva black (1).png' class="img-fluid" alt="Responsive image"></div>
+               <a href="./Signup.html" class="btn btn-primary" role="button">Sign Up</a>
+               <a href="/Signup.html" class="btn btn-primary" role="button">Login</a>
+            </div>
+      </div>
+
+
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              
+            <img src="./images/pexels-fauxels-3184465.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-md-block">
+                <h5 class="text-body">Make Connections</h5>
+                <p class="text-body">Meet employers who value your knowledge and assets</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/pexels-fauxels-3183198.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-md-block">
+               <h5 class="text-body">Discover Your Passion</h5>
+               <p class="text-body">With access to many opportunities, Handy allows you to persue passions and interests</p>
+             </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/pexels-pixabay-534229.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-md-block">
+               <h5 class="text-body">Make Connections</h5>
+               <p class="text-body">Meet employers who value your knowledge and assets</p>
+             </div>
+          </div>
         </div>
-    </nav>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <p class="text-center">Here at Handy it is our goal to put you in touch with meaningful employers and assist you in your job search. We provide services that allow you to get yourself back in the workplace and find meaningful employment.</p>
+
+      <!----------------------------------------------->
+      <!-- JS: Boostrap, Firebase, API related    -->
+      <!----------------------------------------------->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
 
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 
-    <img style="opacity: 0.7; height: 90vh; width:100vw;" src="./images/unknown.png" class="img-fluid"
-        alt="Responsive image">
+      <!--------------------------------------------------------------------->
+      <!-- JS files: Your own JavaScript functions included here    -->
+      <!--------------------------------------------------------------------->
 
 
-
-
-    
-
-    
-
-    <div class="d-flex p-2 bd-highlight">
-        <div class="text-center">
-
-            <div class="centered"><b>Welcome to Handy!</b><br>
-
-                <a href="./Signup.html" class="btn btn-primary" role="button">Sign Up</a>
-                <a href="/Signup.html" class="btn btn-primary" role="button">Login</a>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-    <div class="bg-info" id="spacing"></div>
-    <div class="card-deck">
-
-        <div class=" bg-info card">
-            <div class="text-center">
-            </div>
-            <img class="card-img-top" src="./images/pexels-andrea-piacquadio-927022.jpg" alt="Card image cap">
-            <div class="p-3 mb-2 bg-primary text-white">
-
-                <div class="card-body">
-                    <div class="text-center">
-                        <h5 class="card-title">Connect </h5>
-                        <p> Meet local business owners</p>
-                        <a href="./profile.html" class="btn btn-light">Make a profile today</a>
-                    </div>
-                    <p class="card-text"></p>
-
-                </div>
-            </div>
-        </div>
-        <div class="bg-info card">
-            <div class="text-center">
-            </div>
-            <img class="card-img-top" src="./images/pexels-sebastian-coman-photography-3437689.jpg"
-                alt="Card image cap">
-            <div class="p-3 mb-2 bg-primary text-white">
-                <div class="card-body">
-                    <div class="text-center">
-                        <h5 class="card-title">Find your passion</h5>
-                        <p>Try something new </p>
-                        <a href="./About Handy.html" class="btn btn-light">Explore Opportunities</a>
-                    </div>
-                    <div class="cardtext">
-                        <p class="card-text">
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bg-info card">
-            <div class="text-center">
-
-            </div>
-            <img class="card-img-top" src="./images/pexels-pixabay-534229.jpg" alt="Card image cap">
-            <div class="p-3 mb-2 bg-primary text-white">
-                <div class="card-body">
-                    <div class="text-center">
-                        <h5 class="card-title">Earn on your free time</h5>
-                        <p>Earn when you want</p>
-                        <a href="./jobsearch.html" class="btn btn-light">Search Jobs</a>
-                    </div>
-                    <div class="cardtext">
-                        <p class="card-text">
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>-->
-    <!-- Footer -->
-    <nav class="navbar fixed-bottom navbar-light bg-primary">
-        <div class="container-fluid">
+      <!--Footer-->
+      <nav class="navbar fixed-bottom navbar-light bg-primary">
+         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">
-                <div><img class="handy" src="./images/Handy (1).png"></div>
+            <img src="./images/Handy (1).png" width="80" height="80" alt="">
             </a>
-
-        </div>
-    </nav>
-
-
-
-
-
-    <!----------------------------------------------->
-    <!-- JS: Boostrap, Firebase, API related    -->
-    <!----------------------------------------------->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-        </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-        </script>
-
-
-
-
-    <!--------------------------------------------------------------------->
-    <!-- JS files: Your own JavaScript functions included here    -->
-    <!--------------------------------------------------------------------->
-
-
-
-    <nav class="navbar fixed-bottom navbar-light bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">
-                <div><img class="handy" src="./images/Handy (1).png"></div>
-            </a>
-
-        </div>
-    </nav>
-
-</body>
-
-
+         </div>
+      </nav>
+   </body>
 </html>

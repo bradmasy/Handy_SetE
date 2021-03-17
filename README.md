@@ -15,6 +15,8 @@ Edit log:
 - brad updated footer color & links in cards march 9th 2021
 - brad working on job search page
 - brad working on profile page
+- brad redone index.html for flex and mobile first march 16th 2021
+
 
 ## Technologies
 Technologies used for this project:

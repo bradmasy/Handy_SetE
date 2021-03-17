@@ -53,7 +53,7 @@
 </style>
 </head>
 
-<body class="p-3 mb-2 bg-info text-dark">
+<body class="p-3 mb-2 bg-light text-dark">
 
     <!-------------------------------------->
     <!-- The following is HTML for layout -->
@@ -101,7 +101,9 @@
 
         </div>
     </nav>
-
+    
+    <div class="bg-image" style ="background-image: url('https://media-private.canva.com/MADar2P5gno/1/screen_2x.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJWF6QO3UH4PAAJ6Q%2F20210315%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210315T141701Z&X-Amz-Expires=66307&X-Amz-Signature=3a121e399c19750f5dbedd65bf7c4a7c2930080b95bdf7a419c1726115f834b2&X-Amz-SignedHeaders=host&response-expires=Tue%2C%2016%20Mar%202021%2008%3A42%3A08%20GMT'); height: 100vh;">
+    </div>
     <!-- The surrounding HTML is left untouched by FirebaseUI.
      Your app may use that space for branding, controls and other customizations.-->
     <h1>Welcome to Handy<br> Lets get you logged in</h1>
@@ -118,6 +120,10 @@
 
 
 
+      <div class="container">
+        <h1 class="display-4">You are Now logged in</h1>
+        <h2><span id="quote-goes-here"></span></h2>
+    </div>
 
 
     <!--DOM ELEMENT for firestore-->  
@@ -130,7 +136,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
-    <script src="scripts/Handy.js"></script>
+    <script src="./scripts/Handy_api_key.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -185,11 +191,7 @@
                     }
                     return false;
                 },
-                uiShown: function () {
-                    // The widget is rendered.
-                    // Hide the loader.
-                    document.getElementById('loader').style.display = 'none';
-                }
+              
             },
             // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
             signInFlow: 'popup',
@@ -211,6 +213,18 @@
 
         // The start method will wait until the DOM is loaded.
         ui.start('#firebaseui-auth-container', uiConfig);
+</script>
+
+<script>
+       
+    function readQuote(){
+        db.collection("messages").doc("tuesday").
+        onSnapshot(function(snap){
+            console.log(snap.data());
+        })
+    }
+    readQuote();
+      
     </script>
     
 
