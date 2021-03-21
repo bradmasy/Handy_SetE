@@ -21,17 +21,17 @@ function userID(){
 userID();
 */
 
-function displayCities(){
-    db.collection("cities").get()
+function displayJob(){
+    db.collection("Business").get()
     .then(function(snap){
         snap.forEach(function(doc){
-            var n = doc.data().name;             //gets the name field
+            var n = doc.data().title;             //gets the name field
             console.log(n);
-            var cityid = doc.data().code;        //gets the unique ID field
-            console.log(cityid);
-            document.getElementById(cityid).innerText = n;
+            var jobid = doc.data().code;        //gets the unique ID field
+            console.log(jobid);
+            document.getElementById(jobid).innerText = n;
         })
 
     })
 }
-displayCities();
+displayJob();
