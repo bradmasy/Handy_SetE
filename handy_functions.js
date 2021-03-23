@@ -29,9 +29,17 @@ function displayJob(){
             console.log(n);
             var jobid = doc.data().code;        //gets the unique ID field
             console.log(jobid);
+
+            var jobdes = doc.data().jobdes;
+            console.log(jobdes);
+            var jobOne = doc.data().descriptionID;
+            console.log(jobOne);
             document.getElementById(jobid).innerText = n;
+
+            document.getElementById(jobOne).innerText = jobdes;
         })
 
     })
 }
 displayJob();
+

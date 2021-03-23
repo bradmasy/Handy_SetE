@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>Handy</title>
+   <meta name="Handy Freelance" content="Handy Freelance">
+   <meta name="author" content="Handy">
+   <!-- Bootstrap for Mobile-first, and JQuery -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <link rel="icon" type="image/png" href="images/coffee.png">
+   <link rel="stylesheet" href="./styles/new style sheet.css">
+   </style>
+</head>
+
+<body class="p-3 mb-2 bd-light text-dark">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="./index.html">
+      </a>
+      <a class="navbar-brand ml-5" href="./index.html">
+         <img src="./images/Handy (1).png" width="90" height="40" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+         <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+               <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="./About Handy.html">About Handy</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="jobsearch.html">Job Board</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="./blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="./contact_us.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="Signup.html">Sign Up/Login</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="postajob.html">Post a Job</a>
+            </li>
+         </ul>
+         <form class="form-inline">
+            <input class="form-control sm-sm-1" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+      </div>
+   </nav>
+   <div>
+      <br>
+      <h1 class="text-center display-1" style="background-color:lightblue;">Create Profile</h1><br>
+
+
+
+      <div class="p-2">
+
+
+
+
+         <div style="margin-top:10px;" class="text-center"><button type="button" class="btn btn-primary">View Cover
+               Letter</button>
+            <button type="button" class="btn btn-primary">PDF Resume</button>
+         </div>
+
+      </div>
+      <div class="p-2 justify-content-center">
+         <div class="d-flex flex-column">
+            <div class="p-2">
+               <h1 class="text-center">First Name</h1>
+               <div class="form-group">
+
+                  <input class="form-control" id="firstName" rows="3"></input>
+               </div>
+
+            </div>
+            <div class="p-2">
+               <h1 class="text-center">Last Name</h1>
+               <div class="form-group">
+
+                  <input class="form-control" id="lastName" rows="3"></input>
+               </div>
+
+            </div>
+
+            <div class="p-2">
+               <h1 class="text-center">Headline</h1>
+               <div class="form-group">
+                  <input class="form-control" id="headline" rows="3"></input>
+               </div>
+               <div class="p-2">
+                  <h1 class="text-center">Biography</h1>
+                  <div class="text-center mb-2"><label for="exampleFormControlTextarea1">Tell us a bit about
+                        yourself!</label></div>
+                  <div class="form-group">
+
+                     <textarea class="form-control" id="biography" rows="3"></textarea>
+                  </div>
+
+               </div>
+               <div class="p-2">
+                  <h1 class="text-center">Experience</h1><br>
+                  <div class="form-group">
+
+                     <textarea class="form-control" id="experience" rows="3"></textarea>
+                  </div>
+
+               </div>
+               <div class="p-2 w-100">
+                  <h1 class="text-center">References</h1><br>
+                  <div class="form-group">
+
+                     <textarea class="form-control" id="references" rows="3"></textarea>
+                  </div>
+
+                  <div class="d-flex flex-row">
+                     <div class="container text-center py-3">
+                        <div id="imgDiv"></div>
+                        <input type="file" id="profilePic" accept="image/*" />
+                </div>
+                  </div>
+                
+                  <div class="d-flex flex-row">
+                     <div class="container text-center py-3">
+                        <div class="text-center"><button id="createProfile" type="button">Create your Profile</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="text-center"><button id="linkGenerator" type="button">Generate your Link</button></div>
+      <div class="text-center"><a id="yourProfile">Check out your profile</a></div>
+
+      <script src="./scripts/createprofilescript.js"></script>
+      <script src="scripts/Handy_api_key.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+         </script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+</body>
+<!-- Footer -->
+
+
+</html>

@@ -16,6 +16,8 @@ Edit log:
 - brad working on job search page
 - brad working on profile page
 - brad redone index.html for flex and mobile first march 16th 2021
+-brad working on javascript for create profile page
+-brad working on data bases on firebase
 
 
 ## Technologies
