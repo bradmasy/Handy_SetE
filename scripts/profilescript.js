@@ -1,3 +1,6 @@
+
+/*
+
 function getObject(){
     var object = JSON.parse(localStorage.getItem("formdata"));
     console.log(object);
@@ -34,3 +37,4 @@ changeRef();
 
 let url = (URLSearchParams);
 console.log(url);
+*/

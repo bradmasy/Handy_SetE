@@ -69,9 +69,8 @@
     </nav> 
 
     <div class="container">
-        <h1 class="display-4">You are Now logged in</h1>
-        <h2><span id="quote-goes-here"></span></h2>
-    </div>
+        <h1 class="display-4">You are Now logged in, <span id="name"></span></h1>
+        
 
 
 <!--JavaScript Files-->
@@ -83,17 +82,9 @@ integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOn
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+<script src="./scripts/successfulLogin.js"></script>
 <script src="./scripts/Handy_api_key.js"></script>
-<script>
-    function readQuote(){
-    db.collection("messages").doc("tuesday")
-    .onSnapshot(function(snap){
-        console.log(snap.data());
-        document.getElementById("quote-goes-here").innerHTML = snap.data().message;
-    })
-}
-readQuote();
-</script>
+
 
 
 
