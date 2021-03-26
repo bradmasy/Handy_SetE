@@ -38,3 +38,27 @@ changeRef();
 let url = (URLSearchParams);
 console.log(url);
 */
+
+
+
+funcion readBio(){
+    db.collection("user").doc("brad").
+    onSnapshot(function(data){
+        console.log("current data: " + data.data());
+    })
+    document.getElementById("bio").innerHTML = data.data().bio;
+}
+readBio();
+
+
+var docRef = db.collection("user");
+console.log(docRef);
+docRef.get().then((doc)=>{
+    if(doc.exists){
+        console.log("document data: ", doc.data());
+    } else {
+        console.log("no such data");
+    }
+}).catch((error) =>{
+    console.log("error getting document: ", error);
+});
