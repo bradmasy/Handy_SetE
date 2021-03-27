@@ -84,9 +84,6 @@ generatePicture();
 
 */
 
-let bio = document.getElementById("biography").value;
-
-
 
 document.getElementById("bioButt").addEventListener("click",function(){
     let bio = document.getElementById("biography").value;
@@ -167,45 +164,4 @@ document.getElementById("ref").addEventListener("click",function(){
     alert("References Updated!")
 })
 
-
-
-
-
-/*
-function bioToDataB(){
-    document.getElementById("bioButt").addEventListener("click", function(){
-        db.collection("user").add({
-            name:"brad"
-        })
-        .then((docRef)=>{
-            console.log("document written with ID: ", docRef.id)
-        })
-        .catch((error)=>{
-            console.error("error adding document: ", error);
-        });
-        console.log(bio);
-        addBioDataToCloud()
-    })
-    
-}
-bioToDataB();
-
-*/
-
-
-function getEmail(){
-    document.getElementById("button1").addEventListener("click", function(){
-        var email = document.getElementById("emailAddress").value;
-        console.log(email);
-        db.collection("cities")
-        .where("name", "==", email)
-        .get()
-        .then(function(snap){
-            snap.forEach(function(doc) {
-                console.log(doc.data());
-            });
-            
-        })
-    })
-}
 

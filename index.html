@@ -153,56 +153,62 @@
 
          <div class="d-flex p-2 justify-content-center mb-5"><h1 class="display-4">Recent Job Posts</h1></div>
 
-         <div class="container text-center py-3">
-            <input type="file"/>
-    </div>
+        
 
    <div class="container">
       <div class="card-group">
+         <!--hospitality card-->
          <div class="card">
             <img src="images/blah.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-               <h5 class="card-title" id="DC">Card title</h5>
-               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+               <h5 class="card-title" id="hospitalityJob">Card title</h5>
+               <p id="hospitalityDescription"class="card-text">This is a wider card with supporting text below as a natural lead-in to
                   additional content. This content is a little bit longer.</p>
-               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+               <p class="card-text"><b>Salary:</b><p id="hospoJobSalary"></p></p>
             </div>
          </div>
+         <!--technology card-->
          <div class="card">
             <img src="images/blah.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-               <h5 class="card-title" id="bradmasciotra@gmail.com">This card has supporting text below as a natural
+               <h5 id="techJob" class="card-title" ></h5>
+               <p id="techJobDescription">This card has supporting text below as a natural
                   lead-in to additional content.
                   </p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <p class="card-text"><b>Salary:</b><p id="techJobSalary"></p></p>
             </div>
          </div>
+         <!--trades card-->
          <div class="card">
             <img src="images/blah.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-               <h5 class="card-title" id="bradmasciotra@gmail.com">This card has supporting text below as a natural
+               <h5 id="tradeJob" class="card-title"></h5>
+                  <p id="tradeJobDescription">This card has supporting text below as a natural
                   lead-in to additional content.
                   </p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <p class="card-text"><b>Salary:</b></p><p id="tradeJobSalary"> updated 3 mins ago</p>
             </div>
          </div>
+         <!---->
          <div class="card">
             <img src="images/blah.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-               <h5 class="card-title" id="hello"></h5><p id="job1"> card has supporting text below as a natural
+               <h5 id="serviceJob" class="card-title"></h5>
+               <p id="serviceJobDescription"> card has supporting text below as a natural
                   lead-in to additional content.
                </p>
-                  <p class="card-text"><small class="text-muted"><span > Last updated 3 mins ago</span></small></p>
+                  <p class="card-text"><b>Salary:</b></p><p id="serviceJobSalary"></p>
             </div>
          </div>
+         <!---->
          <div class="card">
             <img src="images/blah.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-               <h5 class="hospitalJob" >Card title</h5>
-               <span><p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+               <h5 id="hospitalJob" class="card-title" >Card title</h5>
+               <span><p id="hospoDesc" class="card-text">This is a wider card with supporting text below as a natural lead-in to
                   additional content. This card has even longer content than the first to show that equal height
                   action.</p>
-               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+               <p class="card-text"><b>Salary:</b><p id="hospitalSalary"></p>
             </div>
          </div>
       </div>
@@ -232,7 +238,7 @@
    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
    <script src="./scripts/Handy_api_key.js"></script>
-   <script src="./handy_functions.js"></script>
+   <script src="./scripts/handyIndexs.js"></script>
 
 
 
@@ -247,13 +253,7 @@
 
 
    <!--Footer-->
-   <nav class="navbar fixed-bottom navbar-light bg-primary">
-      <div class="container-fluid">
-         <a class="navbar-brand" href="./index.html">
-            <img src="./images/Handy (1).png" width="80" height="80" alt="">
-         </a>
-      </div>
-   </nav>
+   
 </body>
 
 </html>
