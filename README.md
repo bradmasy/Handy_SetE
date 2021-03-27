@@ -18,6 +18,7 @@ Edit log:
 - brad redone index.html for flex and mobile first march 16th 2021
 -brad working on javascript for create profile page
 -brad working on data bases on firebase
+- brad is working on successfulLogin script
 
 
 ## Technologies

@@ -1,6 +1,19 @@
-var user = firebase.auth().currentUser;
-console.log(user);
 
+function submitInput(){
+    
+    document.getElementById("pushMe").addEventListener("click",function(){
+    let input = document.getElementById("test").value;
+    console.log(input)
+    db.collection("users")//user collection
+    .doc(user.uid)// user id/hash code
+    .collection("banking")//placing collection banking collection
+    .add({ //add the province to banking collection as a field
+        "test": input
+    })
+    })
+    }
+
+    
 function hello(){
     firebase.auth().onAuthStateChanged(function(user){
     if (user){
@@ -20,22 +33,11 @@ function hello(){
     hello();
 
 
-    
-function submitInput(){
-    
-    document.getElementById("pushMe").addEventListener("click",function(){
-    let input = document.getElementById("test").value;
-    console.log(input)
-    db.collection("users")//user collection
-    .doc(user.uid)// user id/hash code
-    .collection("banking")//placing collection banking collection
-    .add({ //add the province to banking collection as a field
-        "test": input
-    })
-    })
-    }
+submitInput();
+})
 
-    submitInput();
+
+
 
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
   .then(() => {
