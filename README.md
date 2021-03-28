@@ -20,6 +20,7 @@ Edit log:
 -brad working on data bases on firebase
 - brad is working on successfulLogin script
 -brad is working on user authorizatin 03/27/2021
+- brad: script for create profile stores users data to their profile in the cloud 03/28/2021 4:40pm
 
 
 ## Technologies

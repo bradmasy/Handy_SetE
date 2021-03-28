@@ -39,7 +39,25 @@ let url = (URLSearchParams);
 console.log(url);
 */
 
+function authUser(){
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+      if(firebaseUser){
+        console.log(firebaseUser.email);
+        console.log(firebaseUser);
+        var user = firebaseUser.uid
+       
+        
+        console.log("used id: " + user);
+        return user;
+      }
+      else{
+        console.log("none");
+      }
+    })
+    }
+    authUser();
 
+console.log(auth);
 
 function readBio(){
     db.collection("user").doc(user.uid).

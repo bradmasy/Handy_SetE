@@ -70,7 +70,7 @@ function generatePicture(){
     let img = document.getElementById("profilePic");
     
     img.addEventListener("change",function(){
-        img.src = img.value;
+        ioimg.src = img.value;
         console.log(img["src"]);
         let div = document.getElementById("imgDiv");
         console.log(img.src);
@@ -84,84 +84,147 @@ generatePicture();
 
 */
 
+function addBioToCloud(){
 
+    firebase.auth().onAuthStateChanged(firebaseUser =>{
+        if(firebaseUser){
+            var user = firebaseUser.uid
+            let bio = document.getElementById("biography").value;
+            db.collection("users").doc(user).update({
+            bio:bio
+                }).then(function(){
+            console.log("bio added")
+            })
+            alert("Bio Updated!");
+        }
+    })
+
+}
+function addHeadlineToCloud(){
+    firebase.auth().onAuthStateChanged(firebaseUser =>{
+        if(firebaseUser){
+            var user = firebaseUser.uid
+            let headline = document.getElementById("headline").value;
+            db.collection("users").doc(user).update({
+            headline:headline
+        }).then(function(){
+            console.log("headline added")
+        })
+        alert("Headline Updated!")
+        }
+    })
+}
+function addFirstNameToCloud(){
+    firebase.auth().onAuthStateChanged(firebaseUser =>{
+        if(firebaseUser){
+            var user = firebaseUser.uid
+            let firstName = document.getElementById("firstName").value;
+            db.collection("users").doc(user).update({
+                firstName:firstName
+        }).then(function(){
+            console.log("first name added")
+        })
+        alert("First Name Updated!")
+        }
+    })
+}
+function addLastNameToCloud(){
+    firebase.auth().onAuthStateChanged(firebaseUser =>{
+        if(firebaseUser){
+            var user = firebaseUser.uid
+            let lastName = document.getElementById("lastName").value;
+            db.collection("users").doc(user).update({
+                lastName: lastName
+        }).then(function(){
+            console.log("last name added")
+        })
+        alert("Last Name Updated!")
+        }
+    })
+}
+function addExperienceToCloud(){
+    firebase.auth().onAuthStateChanged(firebaseUser =>{
+        if(firebaseUser){
+            var user = firebaseUser.uid
+            let experience = document.getElementById("experience").value;
+            db.collection("users").doc(user).update({
+                experience: experience
+            }).then(function(){
+                console.log("experience added")
+            })
+            alert("Experience Updated!")
+        }
+    })
+}
+function addRefToCloud(){
+    firebase.auth().onAuthStateChanged(firebaseUser =>{
+        if(firebaseUser){
+            var user = firebaseUser.uid
+            let references = document.getElementById("references").value;
+            db.collection("users").doc(user).update({
+                references: references
+            }).then(function(){
+                console.log("references added")
+            })
+            alert("References Updated!")
+        }
+    })
+}
+function addProfileToCloud(){
 document.getElementById("bioButt").addEventListener("click",function(){
-    let bio = document.getElementById("biography").value;
-    console.log(bio);
-    db.collection("users").doc("brad").update({
-        bio:bio
-    }).then(function(){
-        console.log("bio added")
-    })
-    alert("Bio Updated!");
+    addBioToCloud();
 })
-
 document.getElementById("headButt").addEventListener("click",function(){
-    let headline = document.getElementById("headline").value;
-    console.log(headline);
-    db.collection("users").doc("brad").update({
-        headline:headline
-    }).then(function(){
-        console.log("headline added")
-    })
-    alert("Headline Updated!")
+    addHeadlineToCloud();
 })
-
 document.getElementById("firstNameButt").addEventListener("click",function(){
-    let firstName = document.getElementById("firstName").value;
-    console.log(firstName);
-    db.collection("users").doc("brad").update({
-        firstName:firstName
-    }).then(function(){
-        console.log("first name added")
-    })
-    alert("First Name Updated!")
+    addFirstNameToCloud();
 })
-
 document.getElementById("lastNameButt").addEventListener("click",function(){
-    let lastName = document.getElementById("lastName").value;
-    console.log(lastName);
-    db.collection("users").doc("brad").update({
-        lastName: lastName
-    }).then(function(){
-        console.log("last name added")
-    })
-    alert("Last Name Updated!")
+    addLastNameToCloud();
 })
-
-
-document.getElementById("email").addEventListener("click",function(){
-    let emailAddress = document.getElementById("emailAddress").value;
-    console.log(emailAddress);
-    db.collection("users").doc("brad").update({
-        email: emailAddress
-    }).then(function(){
-        console.log("email added")
-    })
-    alert("Email Address Updated!")
-})
-
-
 document.getElementById("exp").addEventListener("click",function(){
-    let experience = document.getElementById("experience").value;
-    console.log(experience);
-    db.collection("users").doc("brad").update({
-        experience: experience
-    }).then(function(){
-        console.log("experience added")
-    })
-    alert("Experience Updated!")
+    addExperienceToCloud();
 })
-
 document.getElementById("ref").addEventListener("click",function(){
-    let references = document.getElementById("references").value;
-    console.log(references);
-    db.collection("users").doc("brad").update({
-       references: references
-    }).then(function(){
-        console.log("references added")
-    })
-    alert("References Updated!")
+    addRefToCloud();
 })
+}
+addProfileToCloud();
 
 
+
+   
+
+
+ 
+
+
+
+
+
+
+function authUser(){
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+      if(firebaseUser){
+        console.log(firebaseUser.email);
+        console.log(firebaseUser);
+        var user = firebaseUser.uid
+        console.log("used id: " + user);
+        db.collection("users").doc(user).get()
+        .then(function(doc){
+           
+        })
+
+
+
+        return user;
+      }
+      else{
+        console.log("none");
+      }
+    })
+    }
+    authUser();
+console.log(auth.uid);
+console.log(auth);
