@@ -19,6 +19,7 @@ Edit log:
 -brad working on javascript for create profile page
 -brad working on data bases on firebase
 - brad is working on successfulLogin script
+-brad is working on user authorizatin 03/27/2021
 
 
 ## Technologies

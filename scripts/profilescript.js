@@ -41,16 +41,17 @@ console.log(url);
 
 
 
-funcion readBio(){
-    db.collection("user").doc("brad").
+function readBio(){
+    db.collection("user").doc(user.uid).
     onSnapshot(function(data){
         console.log("current data: " + data.data());
     })
     document.getElementById("bio").innerHTML = data.data().bio;
+
 }
 readBio();
 
-
+/*
 var docRef = db.collection("user");
 console.log(docRef);
 docRef.get().then((doc)=>{
@@ -62,3 +63,4 @@ docRef.get().then((doc)=>{
 }).catch((error) =>{
     console.log("error getting document: ", error);
 });
+*/
