@@ -16,12 +16,12 @@ Edit log:
 - brad working on job search page
 - brad working on profile page
 - brad redone index.html for flex and mobile first march 16th 2021
--brad working on javascript for create profile page
--brad working on data bases on firebase
+- brad working on javascript for create profile page
+- brad working on data bases on firebase
 - brad is working on successfulLogin script
--brad is working on user authorizatin 03/27/2021
+- brad is working on user authorization 03/27/2021
 - brad: script for create profile stores users data to their profile in the cloud 03/28/2021 4:40pm
-
+- brad: working on profile script(trying to plug data from cloud to render profile page per user) 03/28/2021 4:45pm
 
 ## Technologies
 Technologies used for this project:

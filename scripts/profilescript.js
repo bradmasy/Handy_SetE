@@ -1,7 +1,101 @@
 
+function renderProfName(){
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+      if(firebaseUser){
+        var user = firebaseUser.uid
+       db.collection("users").doc(user)
+       .onSnapshot(function(snap){
+           var cloudFirstName = snap.data().firstName;
+           var cloudLastName = snap.data().lastName;
+           document.getElementById("profileName").textContent = cloudFirstName + " " + cloudLastName;
+       })
+      }
+      else{
+        console.log("none");
+      }
+    })
+    }
+    renderProfName();
+
+    function renderProfHeading(){
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+          if(firebaseUser){
+            var user = firebaseUser.uid
+           db.collection("users").doc(user)
+           .onSnapshot(function(snap){
+               var cloudHeading = snap.data().headline;
+               document.getElementById("headline").textContent = cloudHeading;
+           })
+          }
+          else{
+            console.log("none");
+          }
+        })
+        }
+        renderProfHeading();
+
+function renderProfRef(){
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+      if(firebaseUser){
+        var user = firebaseUser.uid
+       db.collection("users").doc(user)
+       .onSnapshot(function(snap){
+           var cloudRef = snap.data().references;
+           document.getElementById("ref").textContent = cloudRef
+       })
+      }
+      else{
+        console.log("none");
+      }
+    })
+    }
+    renderProfRef();
+
+
+
+
+
+function renderProfBio(){
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+      if(firebaseUser){
+        var user = firebaseUser.uid
+       db.collection("users").doc(user)
+       .onSnapshot(function(snap){
+           console.log("current data: " + snap.data().bio);
+           var cloudBio = snap.data().bio
+           document.getElementById("bio").textContent = cloudBio;
+       })
+      }
+      else{
+        console.log("none");
+      }
+    })
+    }
+    renderProfBio();
+
+    
+    function renderProfExperience(){
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+          if(firebaseUser){
+            var user = firebaseUser.uid
+           db.collection("users").doc(user)
+           .onSnapshot(function(snap){
+               console.log("current data: " + snap.data().experience);
+               var cloudExp = snap.data().experience;
+               document.getElementById("exp").textContent = cloudExp;
+           })
+            return user;
+          }
+          else{
+            console.log("none");
+          }
+        })
+        }
+        renderProfExperience();
+
 /*
 
-function getObject(){
+function getObject(
     var object = JSON.parse(localStorage.getItem("formdata"));
     console.log(object);
     return object
@@ -39,35 +133,8 @@ let url = (URLSearchParams);
 console.log(url);
 */
 
-function authUser(){
-    firebase.auth().onAuthStateChanged(firebaseUser => {
-      if(firebaseUser){
-        console.log(firebaseUser.email);
-        console.log(firebaseUser);
-        var user = firebaseUser.uid
-       
-        
-        console.log("used id: " + user);
-        return user;
-      }
-      else{
-        console.log("none");
-      }
-    })
-    }
-    authUser();
 
-console.log(auth);
 
-function readBio(){
-    db.collection("user").doc(user.uid).
-    onSnapshot(function(data){
-        console.log("current data: " + data.data());
-    })
-    document.getElementById("bio").innerHTML = data.data().bio;
-
-}
-readBio();
 
 /*
 var docRef = db.collection("user");
@@ -82,3 +149,26 @@ docRef.get().then((doc)=>{
     console.log("error getting document: ", error);
 });
 */
+function writeBradData2(){
+  firebase.auth().onAuthStateChanged(function(user){
+      var userid = user.uid;
+      var bio = "i'm a cst student";
+      var profileinfo1 = "info1";
+      var profileinfo2 = "info2";
+      var item = {
+          "bio": bio
+      }
+      var pitem = {
+          "p1": profileinfo1,
+          "p2": profileinfo2
+      }
+      console.log(item);
+      db.collection("users").doc(user.uid)
+      .update(item)
+      .then(function(){
+          db.collection("users/"+user.uid+"/profiles")
+          .add(pitem);
+      })
+  })
+}
+writeBradData2();
