@@ -22,6 +22,10 @@ Edit log:
 - brad is working on user authorization 03/27/2021
 - brad: script for create profile stores users data to their profile in the cloud 03/28/2021 4:40pm
 - brad: working on profile script(trying to plug data from cloud to render profile page per user) 03/28/2021 4:45pm
+- brad: working on database branches on firebase for user profile 03/29/2021 11:47pm 
+- brad: ATTN Eric: delete all buttons on createprofile.html except "save changes" and "create your profile"
+- brad: working on database for job submission 03/30/2021 2:06pm
+- brad: working on job board/job forum/community js 03/31/2021 8:16am
 
 ## Technologies
 Technologies used for this project:

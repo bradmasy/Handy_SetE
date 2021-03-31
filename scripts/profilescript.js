@@ -5,8 +5,8 @@ function renderProfName(){
         var user = firebaseUser.uid
        db.collection("users").doc(user)
        .onSnapshot(function(snap){
-           var cloudFirstName = snap.data().firstName;
-           var cloudLastName = snap.data().lastName;
+           var cloudFirstName = snap.data().profile.firstName;
+           var cloudLastName = snap.data().profile.lastName;
            document.getElementById("profileName").textContent = cloudFirstName + " " + cloudLastName;
        })
       }
@@ -23,7 +23,7 @@ function renderProfName(){
             var user = firebaseUser.uid
            db.collection("users").doc(user)
            .onSnapshot(function(snap){
-               var cloudHeading = snap.data().headline;
+               var cloudHeading = snap.data().profile.Headline;
                document.getElementById("headline").textContent = cloudHeading;
            })
           }
@@ -34,13 +34,14 @@ function renderProfName(){
         }
         renderProfHeading();
 
+
 function renderProfRef(){
     firebase.auth().onAuthStateChanged(firebaseUser => {
       if(firebaseUser){
         var user = firebaseUser.uid
        db.collection("users").doc(user)
        .onSnapshot(function(snap){
-           var cloudRef = snap.data().references;
+           var cloudRef = snap.data().profile.References;
            document.getElementById("ref").textContent = cloudRef
        })
       }
@@ -61,8 +62,7 @@ function renderProfBio(){
         var user = firebaseUser.uid
        db.collection("users").doc(user)
        .onSnapshot(function(snap){
-           console.log("current data: " + snap.data().bio);
-           var cloudBio = snap.data().bio
+           var cloudBio = snap.data().profile.Biography;
            document.getElementById("bio").textContent = cloudBio;
        })
       }
@@ -81,7 +81,7 @@ function renderProfBio(){
            db.collection("users").doc(user)
            .onSnapshot(function(snap){
                console.log("current data: " + snap.data().experience);
-               var cloudExp = snap.data().experience;
+               var cloudExp = snap.data().profile.Experience;
                document.getElementById("exp").textContent = cloudExp;
            })
             return user;
@@ -149,26 +149,3 @@ docRef.get().then((doc)=>{
     console.log("error getting document: ", error);
 });
 */
-function writeBradData2(){
-  firebase.auth().onAuthStateChanged(function(user){
-      var userid = user.uid;
-      var bio = "i'm a cst student";
-      var profileinfo1 = "info1";
-      var profileinfo2 = "info2";
-      var item = {
-          "bio": bio
-      }
-      var pitem = {
-          "p1": profileinfo1,
-          "p2": profileinfo2
-      }
-      console.log(item);
-      db.collection("users").doc(user.uid)
-      .update(item)
-      .then(function(){
-          db.collection("users/"+user.uid+"/profiles")
-          .add(pitem);
-      })
-  })
-}
-writeBradData2();

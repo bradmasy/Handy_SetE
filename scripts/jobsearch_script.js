@@ -16,3 +16,8 @@ button.addEventListener("click", function(){
     };
     console.log(nameID);   
 })
+
+let toggleButton = document.getElementById("toggleButton");
+toggleButton.addEventListener("click", function(){
+    alert("im working");
+})
