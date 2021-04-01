@@ -28,28 +28,37 @@ function getTitle(){
     console.log(title)
     return title;
 }
-var jobCounter = 0;
+function getField(){
+    let field = document.getElementById("field").value;
+    console.log(field)
+    return field;
+}
+
+
 let btn = document.getElementById("saveJob");
 btn.addEventListener("click", function(){
-            jobCounter ++;
             var jobPost = {
                 "jobPost":{
-                //"posterID": user,
                 "Title": getTitle(),
                 "Headline":getHeadline(),
                 "Location": getLocation(),
                 "Business": getBusiness(),
                 "Position": getPosition(),
-                "Salary": getSalary()
+                "Salary": getSalary(),
+                "Field" : getField(),
+                "jobID": Math.floor(Math.random() * 10000)
                 }
             };
-            
-            db.collection("jobPostings").doc("new -job: " + jobCounter).set(jobPost)
-            //.then(function(){
-              //  db.collection("jobPostings").add(jobPost)
-           //db.collection("jobPostings").doc("postings").add(jobPost);
-            //console.log("posting updated");
-           // }) ;
-        
-    
-});
+            db.collection("jobPostings")
+            .get()
+            .then(snap => {
+                size = snap.size;
+                console.log(size);
+                db.collection("jobPostings").doc("newJob_" + size).set(jobPost)
+            })
+            });
+
+           
+
+
+

@@ -1,0 +1,11 @@
+.jobPost{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: solid black 2px;
+    color: whitesmoke;
+    background-color:	#0275d8;
+    height: 5vh ;
+    margin-bottom: 4px;
+}
