@@ -2,6 +2,13 @@ let button = document.getElementById("submitButton");
 let jobSection = document.getElementById("postedJobs");
 let jobSearchSection = document.getElementById("newJobPost");
 
+db.collection("jobPostings").get().then(function (querySnapshot) {
+    querySnapshot.forEach(doc => {
+        console.log(doc.id, "=>", doc.data()["jobPost"].jobID);
+        var you = doc.data()["jobPost"].jobID;
+        console.log(you);
+    })
+})
 
 
 
@@ -14,30 +21,22 @@ button.addEventListener("click", function () {
     console.log(field);
     jobSection.style.display = "none";
 
-    function displayJobs() {
-        /*db.collection("jobPostings").where("jobPost.jobID", "array-contains" ,"")
-        .get()
-        .then((doc)=>{
-            if(doc.exists){
-                let job = doc.data();
-                console.log(job.jobPost);
-                console.log(doc.data()+" this is the data")
-            }else{(console.log("no"))}
-        })*/
+    
 
+    function displayJobs() {
         db.collection("jobPostings").where("jobPost.Field", "in", [field])
             .get()
             .then(function (snap) {
-                var size = snap.size;
-                console.log(size);
-                console.log(snap);
                 snap.forEach(function (doc) {
+                    console.log(doc);
                     var name = doc.data();
+                    console.log(name);
+                    let ID = name.jobPost["jobID"];
                     var jobHeading = name.jobPost.Headline;
                     let div = document.createElement("div");
                     let a = document.createElement("a");
-                    a.href="http://127.0.0.1:5502/Handy_SetE/scripts/yournewjob.html?id=" +
-                    div.setAttribute("class", "jobPost");
+                    a.href = "http://127.0.0.1:5502/Handy_SetE/yournewjob.html?id=" + ID;
+                        div.setAttribute("class", "jobPost");
                     let post = document.createTextNode(jobHeading);
                     div.appendChild(post);
                     a.appendChild(div);
@@ -46,8 +45,6 @@ button.addEventListener("click", function () {
                 });
             });
     }
-
-    
     displayJobs();
 })
 
@@ -68,12 +65,9 @@ toggleButton.addEventListener("click", function () {
     else {
         document.getElementById("jobForm").style.display = "none";
         addFormDisplay = true;
-        
+
     }
 })
-
-
-
 db.collection("jobPostings")
     .get()
     .then(querySnapshot => {
@@ -90,7 +84,7 @@ db.collection("jobPostings")
             let id = (data["jobID"]);
             let jobPost = extraction4;
             let a = document.createElement("a");
-            a.href = "http://127.0.0.1:5502/Handy_SetE/scripts/yournewjob.html?id=" + id;
+            a.href = "http://127.0.0.1:5502/Handy_SetE/yournewjob.html?id=" + id;
             let jobNode = document.createTextNode(jobPost);
             div.appendChild(jobNode);
             a.appendChild(div);
