@@ -14,8 +14,9 @@ db.collection("jobPostings").get().then(function (querySnapshot) {
 
 button.addEventListener("click", function () {
     var city = document.getElementById("location").value;
-    var jobField = document.getElementById("field").value;
     var jobTitle = document.getElementById("jobTitle").value;
+    var jobTi= String(jobTitle)
+    console.log(jobTi);
     var salary = document.getElementById("salary").value;
     var field = document.getElementById("field").value;
     console.log(field);
@@ -23,7 +24,7 @@ button.addEventListener("click", function () {
 
     
 
-    function displayJobs() {
+    function displayJobsField() {
         db.collection("jobPostings").where("jobPost.Field", "in", [field])
             .get()
             .then(function (snap) {
@@ -45,7 +46,82 @@ button.addEventListener("click", function () {
                 });
             });
     }
-    displayJobs();
+    displayJobsField();
+    
+    function displayJobsLocation() {
+        db.collection("jobPostings").where("jobPost.Location", "in", [city])
+            .get()
+            .then(function (snap) {
+                snap.forEach(function (doc) {
+                    console.log(doc);
+                    var name = doc.data();
+                    console.log(name);
+                    let ID = name.jobPost["jobID"];
+                    var jobHeading = name.jobPost.Headline;
+                    let div = document.createElement("div");
+                    let a = document.createElement("a");
+                    a.href = "http://127.0.0.1:5502/Handy_SetE/yournewjob.html?id=" + ID;
+                        div.setAttribute("class", "jobPost");
+                    let post = document.createTextNode(jobHeading);
+                    div.appendChild(post);
+                    a.appendChild(div);
+                    jobSearchSection.appendChild(a);
+
+                });
+            });
+    }
+    displayJobsLocation();
+    function displayJobsSalary() {
+        db.collection("jobPostings").where("jobPost.Salary", "in", [salary])
+            .get()
+            .then(function (snap) {
+                snap.forEach(function (doc) {
+                    console.log(doc);
+                    var name = doc.data();
+                    console.log(name);
+                    let ID = name.jobPost["jobID"];
+                    var jobHeading = name.jobPost.Headline;
+                    let div = document.createElement("div");
+                    let a = document.createElement("a");
+                    a.href = "http://127.0.0.1:5502/Handy_SetE/yournewjob.html?id=" + ID;
+                        div.setAttribute("class", "jobPost");
+                    let post = document.createTextNode(jobHeading);
+                    div.appendChild(post);
+                    a.appendChild(div);
+                    jobSearchSection.appendChild(a);
+
+                });
+            });
+    }
+    displayJobsSalary();
+    function displayJobsPosition() {
+        db.collection("jobPostings").where("jobPost.Position", "in", [jobTi])
+            .get()
+            .then(function (snap) {
+                snap.forEach(function (doc) {
+                    console.log(doc);
+                    var name = doc.data();
+                    console.log(name);
+                    let ID = name.jobPost["jobID"];
+                    var jobHeading = name.jobPost.Headline;
+                    let div = document.createElement("div");
+                    let a = document.createElement("a");
+                    a.href = "http://127.0.0.1:5502/Handy_SetE/yournewjob.html?id=" + ID;
+                        div.setAttribute("class", "jobPost");
+                    let post = document.createTextNode(jobHeading);
+                    div.appendChild(post);
+                    a.appendChild(div);
+                    jobSearchSection.appendChild(a);
+
+                });
+            });
+    }
+    displayJobsPosition();
+
+
+
+
+    
 })
 
 
@@ -84,6 +160,8 @@ db.collection("jobPostings")
             let id = (data["jobID"]);
             let jobPost = extraction4;
             let a = document.createElement("a");
+            let b = document.createElement("button");
+            console.log(b);
             a.href = "http://127.0.0.1:5502/Handy_SetE/yournewjob.html?id=" + id;
             let jobNode = document.createTextNode(jobPost);
             div.appendChild(jobNode);
@@ -93,3 +171,15 @@ db.collection("jobPostings")
         })
     })
 
+function addLikeListener(id, likeid){
+            document.getElementById(likeid)
+            .addEventListener("click", function(){
+                //when clicked do this
+                //increment the like counter
+                db.collection("webcams")
+                .doc(id)
+                .update({
+                    likes: firebase.firestore.FieldValue.increment(1)
+                })
+            })
+}

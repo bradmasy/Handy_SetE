@@ -23,10 +23,10 @@ function getHeadline(){
     let headline = document.getElementById("headline").value;
     return headline
 }
-function getTitle(){
-    let title = document.getElementById("title").value;
-    console.log(title)
-    return title;
+function getDesc(){
+    let desc = document.getElementById("description").value;
+    console.log(desc)
+    return desc;
 }
 function getField(){
     let field = document.getElementById("field").value;
@@ -39,7 +39,7 @@ let btn = document.getElementById("saveJob");
 btn.addEventListener("click", function(){
             var jobPost = {
                 "jobPost":{
-                "Title": getTitle(),
+                "Description": getDesc(),
                 "Headline":getHeadline(),
                 "Location": getLocation(),
                 "Business": getBusiness(),
