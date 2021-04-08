@@ -27,7 +27,7 @@ Edit log:
 - brad: working on database for job submission 03/30/2021 2:06pm
 - brad: working on job board/job forum/community js 03/31/2021 8:16am
 - brad: working on js for jobsearch and rendering customized job links, note: working currently on obtaining job id from a posting after its been queried on the drop down menu by field 03/31/2021 10:07pm
-
+- brad: working on js for yournewjob.js(delete function). working on css for job board page 04/07/2021 10:52pm
 ## Technologies
 Technologies used for this project:
 * HTML, CSS

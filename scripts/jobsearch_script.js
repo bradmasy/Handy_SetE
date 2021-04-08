@@ -1,6 +1,9 @@
 let button = document.getElementById("submitButton");
 let jobSection = document.getElementById("postedJobs");
 let jobSearchSection = document.getElementById("newJobPost");
+let jobForm = document.getElementById("jobForm");
+let reset = document.getElementById("reset");
+reset.style.display ="none";
 
 db.collection("jobPostings").get().then(function (querySnapshot) {
     querySnapshot.forEach(doc => {
@@ -9,7 +12,6 @@ db.collection("jobPostings").get().then(function (querySnapshot) {
         console.log(you);
     })
 })
-
 
 
 button.addEventListener("click", function () {
@@ -21,6 +23,9 @@ button.addEventListener("click", function () {
     var field = document.getElementById("field").value;
     console.log(field);
     jobSection.style.display = "none";
+    jobForm.style.display="none";
+    reset.style.display="block";
+    jobSearchSection.style.display="block";
 
     
 
@@ -47,7 +52,6 @@ button.addEventListener("click", function () {
             });
     }
     displayJobsField();
-    
     function displayJobsLocation() {
         db.collection("jobPostings").where("jobPost.Location", "in", [city])
             .get()
@@ -117,20 +121,14 @@ button.addEventListener("click", function () {
             });
     }
     displayJobsPosition();
-
-
-
-
-    
 })
-
 
 
 let toggleButton = document.getElementById("toggleButton");
 let addFormDisplay = true
 let searchForm = document.getElementById("jobForm");
 searchForm.style.display = "none";
-console.log(searchForm);
+
 
 toggleButton.addEventListener("click", function () {
     let display = searchForm.style.display;
@@ -144,6 +142,8 @@ toggleButton.addEventListener("click", function () {
 
     }
 })
+
+
 db.collection("jobPostings")
     .get()
     .then(querySnapshot => {
@@ -168,6 +168,7 @@ db.collection("jobPostings")
             a.appendChild(div);
             console.log(div);
             jobSection.appendChild(a);
+            let br = document.createElement("br");
         })
     })
 
@@ -183,3 +184,9 @@ function addLikeListener(id, likeid){
                 })
             })
 }
+
+reset.addEventListener("click", function(){
+    reset.style.display="none";
+    jobSearchSection.innerHTML="";
+    jobSection.style.display="block";
+})
