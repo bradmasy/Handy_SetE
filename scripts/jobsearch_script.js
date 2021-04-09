@@ -162,7 +162,7 @@ db.collection("jobPostings")
             let a = document.createElement("a");
             let b = document.createElement("button");
             console.log(b);
-            a.href = "http://127.0.0.1:5502/Handy_SetE/yournewjob.html?id=" + id;
+            a.href = "./yournewjob.html?id=" + id;
             let jobNode = document.createTextNode(jobPost);
             div.appendChild(jobNode);
             a.appendChild(div);

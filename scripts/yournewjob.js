@@ -1,10 +1,7 @@
 let params = (new URL(document.location)).searchParams;
-var userID = params.get("user");
-console.log(parseInt(userID));
 var jobID = params.get("id");
 console.log(jobID);
 var newIDjob = parseInt(jobID);
-console.log(newIDjob);
 var collection = db.collection("jobPostings");
 console.log(collection);
 
@@ -39,7 +36,7 @@ db.collection("jobPostings").where("jobPost.jobID","==",newIDjob)
     })
 })
 
-
+/*
 function deleteMe(){
 firebase.auth().onAuthStateChanged(firebaseUser =>{
   if(firebaseUser){
@@ -49,19 +46,20 @@ firebase.auth().onAuthStateChanged(firebaseUser =>{
     .get()
     .then(function(snap){
      snap.forEach(function(doc){
-       console.log(doc.data());
        var docID = doc.id;
        let data = doc.data();
        let userID = data.jobPost["User"];
-       console.log(userID);
        if(user === userID){
         let deletionDiv = document.createElement("div");
         let deleteButton = document.createElement("button");
+        let a = document.createElement("a");
+        a.href = "./jobsearch.html";
         deleteButton.setAttribute("id","deleteMe");
         let deleteTxt = document.createTextNode("Delete Job?");
         let deleteSection = document.getElementById("deleteSection");
         deleteButton.appendChild(deleteTxt);
-        deletionDiv.appendChild(deleteButton);
+        a.appendChild(deleteButton);
+        deletionDiv.appendChild(a);
         deleteSection.appendChild(deletionDiv);
         deleteButton.addEventListener("click",function(){
           alert('Job Post Has Been Deleted');
@@ -69,7 +67,6 @@ firebase.auth().onAuthStateChanged(firebaseUser =>{
           .doc(docID)
           .delete()
           .then(()=>{
-            console.log('deleted');
           }).catch((error)=>{
             console.log(error);
           })
@@ -81,3 +78,57 @@ firebase.auth().onAuthStateChanged(firebaseUser =>{
 })
 };
 deleteMe();
+*/
+
+
+function deleteMe(){
+  firebase.auth().onAuthStateChanged(firebaseUser =>{
+    if(firebaseUser){
+      var user = firebaseUser.uid;
+      console.log(user);
+      db.collection("jobPostings").where("jobPost.User","in",[user])
+      .get()
+      .then(function(snap){
+       snap.forEach(function(doc){
+         var docID = doc.id;
+         let data = doc.data();
+         let userID = data.jobPost["User"];
+         if(user === userID){
+          let deletionDiv = document.createElement("div");
+          let deleteButton = document.createElement("button");
+          let a = document.createElement("a");
+          a.href = "./jobsearch.html";
+          deleteButton.setAttribute("id","deleteMe");
+          let deleteTxt = document.createTextNode("Delete Job?");
+          let deleteSection = document.getElementById("deleteSection");
+          deleteButton.appendChild(deleteTxt);
+          a.appendChild(deleteButton);
+          deletionDiv.appendChild(a);
+          deleteSection.appendChild(deletionDiv);
+          deleteButton.addEventListener("click",function(){
+            alert('Job Post Has Been Deleted');
+            db.collection("jobPostings")
+            .doc(docID)
+            .delete()
+            .then(()=>{
+            }).catch((error)=>{
+              console.log(error);
+            })
+          })
+         }
+       })
+      })
+    }
+  })
+  };
+  deleteMe();
+  
+
+function contactMe(){
+  alert("event works")
+};
+
+let contactButton = document.getElementById("contactButt");
+  contactButton.addEventListener("click", function(){
+    contactMe();
+  });

@@ -1,7 +1,10 @@
-## My Web Application (Title)
+## Handy Freelance Web Application
 
 * [General info](#general-info)
+Handy is a freelance work application directed towards people/businesses searching for employment/staff under various conditions. Handy helps put people in touch with the jobs that they are seeking and allows them to customize their search criteria to find the optimal solution to their needs.
+
 * [Technologies](#technologies)
+
 * [Contents](#content)
 
 ## General Info

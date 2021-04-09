@@ -34,6 +34,11 @@ function getField(){
     return field;
 }
 
+var input = document.getElementsByTagName("input");
+console.log(input["headline"]);
+if(input["headline"] === " "){
+    console.log('no input');
+}
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if(firebaseUser){
@@ -41,6 +46,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         console.log("this is the user: " + user);
         let btn = document.getElementById("saveJob");
         btn.addEventListener("click", function(){
+            alert("Job has now been saved!");
                     var jobPost = {
                         "jobPost":{
                         "Description": getDesc(),
@@ -51,7 +57,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
                         "Salary": getSalary(),
                         "Field" : getField(),
                         "User" : user,
-                        "jobID": Math.floor(Math.random() * 10000)
+                        "jobID": Math.floor(Math.random() * 100000)
                         }
                     };
                     db.collection("jobPostings")
@@ -83,7 +89,7 @@ function yourJobs(){
                     var jobHeading = name.jobPost.Headline;
                     let div = document.createElement("div");
                     let a = document.createElement("a");
-                    a.href = "http://127.0.0.1:5502/Handy_SetE/yournewjob.html?id=" + ID ;
+                    a.href = "./yournewjob.html?id=" + ID ;
                         div.setAttribute("class", "jobPost");
                     let post = document.createTextNode(jobHeading);
                     let buttPost = document.createTextNode("Delete");
@@ -103,10 +109,9 @@ function yourJobs(){
     })
 
 }
-yourJob();
+yourJobs();
 
-
-           
+   
 
 
 
