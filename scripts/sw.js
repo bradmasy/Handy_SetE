@@ -1,4 +1,4 @@
-let HandyCache = "HandyCache";
+/*let HandyCache = "HandyCache";
 let Handy = [
     "./index.html",
     "./handyIndex.js",
@@ -40,3 +40,4 @@ self.addEventListener("fetch",function(event){
     );
 });
 
+*/
