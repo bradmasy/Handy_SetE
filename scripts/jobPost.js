@@ -42,7 +42,7 @@ function getValues(){
     let button = document.getElementById("check")
     button.addEventListener("click", function(){
 
-    alert("working");
+
     let location = document.getElementById("location").value;
     let business = document.getElementById("business").value;
     let headline = document.getElementById("headline").value;
