@@ -68,7 +68,7 @@ function submitInput(){
     }
 submitInput();
 
-console.log(firebaseUser.uid);
+
 
 
 function persist(){

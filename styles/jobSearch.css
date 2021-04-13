@@ -9,3 +9,8 @@
     height: 5vh ;
     margin-bottom: 4px;
 }
+
+#deleteButt{
+    height:20px;
+    width:50px;
+}

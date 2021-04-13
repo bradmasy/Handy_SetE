@@ -176,3 +176,9 @@ function hello(){
     }
     hello();
     
+/*
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js")
+        .then(function (response) { console.log("sw was registered, the scope is: " + response.scope); })
+        .catch(function (error) { console.log("sw was not registered" + error); })
+};*/

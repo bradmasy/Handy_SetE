@@ -211,3 +211,178 @@ addProfileToCloud();
 
 
 
+
+function deleteMe(){
+    firebase.auth().onAuthStateChanged(firebaseUser =>{
+      if(firebaseUser){
+        var user = firebaseUser.uid;
+        console.log(user);
+        db.collection("jobPostings").where("jobPost.User","in",[user])
+        .get()
+        .then(function(snap){
+         snap.forEach(function(doc){
+           var docID = doc.id;
+           let data = doc.data();
+           let userID = data.jobPost["User"];
+           if(user === userID){
+            let deletionDiv = document.createElement("div");
+            let deleteButton = document.createElement("button");
+            let a = document.createElement("a");
+            a.href = "./jobsearch.html";
+            deleteButton.setAttribute("id","deleteMe");
+            let deleteTxt = document.createTextNode("Delete Job?");
+            let deleteSection = document.getElementById("deleteSection");
+            deleteButton.appendChild(deleteTxt);
+            a.appendChild(deleteButton);
+            deletionDiv.appendChild(a);
+            deleteSection.appendChild(deletionDiv);
+            deleteButton.addEventListener("click",function(){
+              alert('Job Post Has Been Deleted');
+              db.collection("jobPostings")
+              .doc(docID)
+              .delete()
+              .then(()=>{
+              }).catch((error)=>{
+                console.log(error);
+              })
+            })
+           }
+         })
+        })
+      }
+    })
+    };
+    deleteMe();
+    
+
+
+    function deleteIt(){
+        firebase.auth().onAuthStateChanged(firebaseUser=>{
+        if(firebaseUser){
+          var user = firebaseUser.uid;
+          console.log(user);
+          db.collection("jobPostings").where("jobPost.User","in",[user])
+          .get()
+          .then(function(data){
+            console.log(data.);
+          });
+        };
+        });
+        };
+        deleteIt();
+
+/*
+    //firebase rules
+    rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+           allow read, write: if request.time < timestamp.date(2021, 5, 6);
+    }
+  }
+}
+*/
+
+
+/*
+function submitProvince(){
+let province = document.getElementById("province").value;
+
+db.collection("Banking").doc("user").update({
+    province:province
+}).then(function(){
+    console.log("province added")
+})
+}
+function submitName(){
+    let name = document.getElementById("name").value;
+    db.collection("Banking").doc("user").update({
+        name:name
+    }).then(function(){
+        console.log("name added")
+    })
+}
+function submitStreet(){
+let street = document.getElementById("streetOrPOB").value;
+db.collection("Banking").doc("user").update({
+    streetOrPOB: street
+}).then(function(){
+    console.log("street added")
+})
+}
+function submitCity(){
+let city = document.getElementById("city").value;
+db.collection("Banking").doc("user").update({
+    city: city
+}).then(function(){
+    console.log("city added")
+})
+}
+function submitPostalCode(){
+    let postalCode = document.getElementById("postalCode").value;
+    db.collection("Banking").doc("user").update({
+        postalCode: postalCode
+    }).then(function(){
+        console.log("postal code added")
+    })
+}
+function submitBranchNum(){
+    let branchNum = document.getElementById("branchNum").value;
+    db.collection("Banking").doc("user").update({
+        branchNum:branchNum
+    }).then(function(){
+        console.log("branch number added")
+    })
+}
+function submitBranchNum(){
+    let branchNum = document.getElementById("branchNum").value;
+     db.collection("Banking").doc("user").update({
+        branchNum:branchNum
+    }).then(function(){
+        console.log("branch number added")
+    })
+}
+function submitInstNum(){
+    let instNum = document.getElementById("instNum").value;
+    db.collection("Banking").doc("user").update({
+        institutionNumber: instNum
+    }).then(function(){
+        console.log("institution number added")
+    })
+}
+function submitAccountNum(){
+    let accountNum = document.getElementById("accountNum").value;
+    db.collection("Banking").doc("user").update({
+        accountNumber: accountNum
+    }).then(function(){
+        console.log("account number added")
+    })
+}
+function submitForm(){
+    document.getElementById("saveButton").addEventListener("click", function(){
+        submitName();
+        submitProvince();
+        submitStreet();
+        submitCity();
+        submitPostalCode();
+        submitBranchNum();
+        submitInstNum();
+        submitAccountNum();
+        alert("Form Updated!");
+    })
+}
+submitForm();
+
+
+
+
+function submitProvince(){
+    let province = document.getElementById("province").value;
+    db.collection("users")//user collection
+    .doc(user.uid)// user id/hash code
+    .collection("banking")//placing collection banking collection
+    .add({ //add the province to banking collection as a field
+        "province": province
+    })
+    }
+    */

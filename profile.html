@@ -13,7 +13,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
    <link rel="icon" type="image/png" href="images/coffee.png">
-   <link rel="stylesheet" href="./styles/new style sheet.css">
+   <link rel="stylesheet" href="./styles/new-style-sheet.css">
    </style>
 </head>
 
@@ -40,11 +40,12 @@
                <a class="nav-link" href="jobsearch.html">Job Board</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="profile.html">Profile</a>
+               <a class="nav-link" href="./postajob.html">Post a Job</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="./blog.html">Blog</a>
+               <a class="nav-link" href="./createprofile.html">Create a Profile</a>
             </li>
+         
             <li class="nav-item">
                <a class="nav-link" href="./contact_us.html">Contact Us</a>
             </li>
@@ -68,8 +69,10 @@
 
         <div class="d-flex flex-row">
             
-            <div class="p-2"><img src="./images/pexels-miquel-ferran-gomez-figueroa-3814446.jpg" class="img-fluid"
+
+         <img id="profPic" class="img-fluid"
                     alt="Responsive image" style="height: 50vh; width: 25vw;">
+            <div class="p-2" id="profilePicture">
                     <div style="margin-top:10px;" class="text-center"><button type="button" class="btn btn-primary">View Cover Letter</button>
                         <button type="button" class="btn btn-primary">PDF Resume</button></div>
                     
@@ -146,6 +149,8 @@
       <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
       <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
       <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
       <script src="scripts/Handy_api_key.js"></script>
     <script src="./scripts/profilescript.js"></script>
 </body>
