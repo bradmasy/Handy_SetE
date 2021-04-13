@@ -54,7 +54,7 @@ db.collection("Business").doc("title").OnSnapshot(function(c){
     document.getElementById("hospitalJob").innerHTML= c.data()
 });
 }
-
+/*
 
 function getHospitalJobCard(){
     db.collection("Business").doc("hospital").get()
@@ -175,6 +175,7 @@ function hello(){
     })
     }
     hello();
+    */
     
 /*
 if ("serviceWorker" in navigator) {

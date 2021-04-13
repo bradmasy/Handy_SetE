@@ -32,7 +32,7 @@ function hello(){
     }
     hello()
 
-
+/*
 
 function authUser(){
 firebase.auth().onAuthStateChanged(firebaseUser => {
@@ -68,7 +68,7 @@ function submitInput(){
     }
 submitInput();
 
-
+*/
 
 
 function persist(){

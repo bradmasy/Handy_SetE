@@ -64,12 +64,17 @@ function getValues() {
         };
     };
 }
+function jobID(){
+    let num = Math.floor(Math.random() * 100000);
+    return num
+}
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         var user = firebaseUser.uid;
         console.log("this is the user: " + user);
         let btn = document.getElementById("saveJob");
+        var num = jobID();
         btn.addEventListener("click", function () {
             if (getValues() === true) {
                 console.log('data was not filled in');
@@ -85,15 +90,16 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
                         "Salary": getSalary(),
                         "Field": getField(),
                         "User": user,
-                        "jobID": Math.floor(Math.random() * 100000)
+                        "jobID": num
                     }
                 };
+                alert("Job Saved!")
                 db.collection("jobPostings")
                     .get()
                     .then(snap => {
                         size = snap.size;
                         size++;
-                        db.collection("jobPostings").doc("newJob_" + size).set(jobPost);
+                        db.collection("jobPostings").doc("newJob_" + num).set(jobPost);
                         console.log('worked');
                     })
             }
