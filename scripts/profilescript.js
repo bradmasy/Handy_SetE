@@ -62,12 +62,11 @@ function displayUserProfilePic() {
           .then(function (doc) {
               var picUrl = doc.data().profilePic;     
               console.log(picUrl);      //extract pic url
-
               // use this line if "mypicdiv" is a "div"
-              //$("#mypicdiv").append("<img src='" + picUrl + "'>")
+              $("#mypicdiv").append("<img src='" + picUrl + "'>")
               
               // use this line if "mypic-goes-here" is an "img" 
-              $("#profPic").attr("src", picUrl);
+              //$("#profPic").attr("src", picUrl);
           })
   })
 }
@@ -101,7 +100,7 @@ function renderProfBio(){
             var user = firebaseUser.uid
            db.collection("users").doc(user)
            .onSnapshot(function(snap){
-               console.log("current data: " + snap.data().experience);
+               
                var cloudExp = snap.data().profile.Experience;
                document.getElementById("exp").textContent = cloudExp;
            })

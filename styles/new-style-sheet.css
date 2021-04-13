@@ -218,41 +218,8 @@ height: 25vh;
   display: block;
 }
 
-<<<<<<< HEAD
 #thumbsUp{
    
    margin-top:10px;
 }
-=======
-.dropdown a:hover {background-color: #ddd;}
 
-.show {display: block;}
-
-.whole-wrapper {
-  width: 60%;
-  margin: auto;
-}
-
-.huge-space {
-  height: 400px;
-  padding: 20px;
-  border-radius: 50px;
-}
-
-.big-space {
-  height: 100px;
-  padding: 20px;
-  border-radius: 50px;
-}
-
-.targetted-audience {
-  border: 3px solid #fff;
-  padding: 20px;
-}
-
-.intro {
-  width: 50%;
-  float: left;
-  padding: 20px;
-}
->>>>>>> cd9e11b3d834ce93e610d70a55819e4465148909

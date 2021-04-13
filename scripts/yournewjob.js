@@ -54,6 +54,7 @@ function deleteMe() {
               let deletionDiv = document.createElement("div");
               let deleteButton = document.createElement("button");
               deleteButton.setAttribute("id", "deleteMe");
+              deleteButton.setAttribute("class","btn btn-primary")
               let deleteTxt = document.createTextNode("Delete Job?");
               let deleteSection = document.getElementById("deleteSection");
               deleteButton.appendChild(deleteTxt);

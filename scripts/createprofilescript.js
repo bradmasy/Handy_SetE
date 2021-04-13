@@ -52,6 +52,7 @@ showPic();
 function uploadPicToCloud() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
+            console.log(user)
             var fileInput = document.getElementById("myProfPic");
             const image = document.getElementById("myPic");
             fileInput.addEventListener("change", function (pic) {
@@ -59,6 +60,7 @@ function uploadPicToCloud() {
                 var source = URL.createObjectURL(myPic);
                 image.src = source;
                 var storageRef = storage.ref("images/" + user.uid + ".jpg");
+                console.log(storageRef)
                 storageRef.put(myPic)
                 var id = user.uid;
 

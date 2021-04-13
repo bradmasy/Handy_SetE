@@ -5,6 +5,7 @@
 #theDesc{
     font-size: 16px;
 }
+/*
 #contactButt{
     height: 5vh;
     width:10vw;
@@ -12,3 +13,14 @@
 
 
 
+
+#deleteMe{
+    background-color: #0275d8;
+    color: white;
+    border: 0;
+    box-shadow: none;
+    height: 5vh;
+    width: 10vw;
+    border-radius: 5%;
+  }
+  */
