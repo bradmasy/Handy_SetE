@@ -386,3 +386,43 @@ function submitProvince(){
     })
     }
     */
+
+//functioning deleteMe function before editing
+    function deleteMe() {
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+          if (firebaseUser) {
+            var user = firebaseUser.uid;
+            console.log(user);
+            db.collection("jobPostings").where("jobPost.User", "in", [user])
+              .get()
+              .then(function (snap) {
+                snap.forEach(function (doc) {
+                  var docID = doc.id;
+                  let data = doc.data();
+                  let userID = data.jobPost["User"];
+                  if (user === userID) {
+                    let deletionDiv = document.createElement("div");
+                    let deleteButton = document.createElement("button");
+                    deleteButton.setAttribute("id", "deleteMe");
+                    let deleteTxt = document.createTextNode("Delete Job?");
+                    let deleteSection = document.getElementById("deleteSection");
+                    deleteButton.appendChild(deleteTxt);
+                    deletionDiv.appendChild(deleteButton);
+                    deleteSection.appendChild(deletionDiv);
+                    deleteButton.addEventListener("click", function () {
+                      alert('Job Post Has Been Deleted');
+                      db.collection("jobPostings")
+                        .doc(docID)
+                        .delete()
+                        .then(() => {
+                        }).catch((error) => {
+                          console.log(error);
+                        })
+                    })
+                  }
+                })
+              })
+          }
+        })
+      };
+      deleteMe();

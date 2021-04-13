@@ -49,7 +49,8 @@ function deleteMe() {
             var docID = doc.id;
             let data = doc.data();
             let userID = data.jobPost["User"];
-            if (user === userID) {
+            let post = data.jobPost["jobID"];
+           if (user === userID && jobID == post) {
               let deletionDiv = document.createElement("div");
               let deleteButton = document.createElement("button");
               deleteButton.setAttribute("id", "deleteMe");
