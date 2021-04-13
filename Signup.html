@@ -28,48 +28,56 @@
     <!-------------------------------------->
     <!-- Header Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="./index.html">
-        </a>
-        <a class="navbar-brand ml-5" href="./index.html">
-           <img src="./images/Handy (1).png" width="90" height="40" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-           <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-  
-           <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                 <a class="nav-link" href="./index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                 <a class="nav-link" href="./About Handy.html">About Handy</a>
-              </li>
-              <li class="nav-item">
-                 <a class="nav-link" href="jobsearch.html">Job Board</a>
-              </li>
-              <li class="nav-item">
-                 <a class="nav-link" href="./postajob.html">Post a Job</a>
-              </li>
-              <li class="nav-item">
-                 <a class="nav-link" href="./createprofile.html">Create a Profile</a>
-              </li>
-           
-              <li class="nav-item">
-                 <a class="nav-link" href="./contact_us.html">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                 <a class="nav-link" href="Signup.html">Sign Up/Login</a>
-              </li>
-              <li class="nav-item">
-                 <a class="nav-link" href="postajob.html">Post a Job</a>
-              </li>
-           </ul>
-           <form class="form-inline">
-              <input class="form-control sm-sm-1" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-        </div>
-     </nav>
+       <a class="navbar-brand" href="./index.html">
+       </a>
+       <a class="navbar-brand ml-5" href="./index.html">
+          <img src="./images/handylogo2.png" width="150" height="63" alt="">
+       </a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+             <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="./About Handy.html">About Handy</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="jobsearch.html">Job Board</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="./postajob.html">Post a Job</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="./createprofile.html">Create a Profile</a>
+             </li>
+
+             <li class="nav-item">
+                <a class="nav-link" href="./contact_us.html">Contact Us</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="Signup.html">Sign Up/Login</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="postajob.html">Post a Job</a>
+             </li>
+          </ul>
+       </div>
+       <div class="dropdown">
+   <button onclick="myFunction()" class="dropbtn">User Button</button>
+   <div id="myDropdown" class="dropdown-content">
+     <a href="./profile.html">Profile</a>
+     <a href="./postBankInfo.html">Settings</a>
+     <a href="#contact">Help & Support</a>
+     <a href="#">Post a Job</a>
+     <a href="#">Manage Your Postings</a>
+     <a href="#">Logout</a>
+   </div>
+   </div>
+    </nav>
 
     <div class="d-flex p-2 justify-content-center"><img src="./images/Handy Logo canva black (1).png"
             style="height: 25%;width: 30%;"></div>
@@ -96,7 +104,7 @@
 
 
 
-    
+
 
     <!--DOM ELEMENT for firestore-->
 
@@ -144,7 +152,7 @@
                     // If the user is a "brand new" user, then create a new "user" in your own database.
                     // Assign this user with the name and email provided.
                     // Before this works, you must enable "Firestore" from the firebase console.
-                    // The Firestore rules must allow the user to write. 
+                    // The Firestore rules must allow the user to write.
                     //------------------------------------------------------------------------------------------
                     var user = authResult.user;
                     if (authResult.additionalUserInfo.isNewUser) {         //if new user
@@ -187,7 +195,7 @@
         ui.start('#firebaseui-auth-container', uiConfig);
     </script>
 
-  
+
 
 
 

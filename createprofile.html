@@ -18,50 +18,57 @@
 </head>
 
 <body class="p-3 mb-2 bd-light text-dark">
-   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="./index.html">
-      </a>
-      <a class="navbar-brand ml-5" href="./index.html">
-         <img src="./images/Handy (1).png" width="90" height="40" alt="">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+     <a class="navbar-brand" href="./index.html">
+     </a>
+     <a class="navbar-brand ml-5" href="./index.html">
+        <img src="./images/handylogo2.png" width="150" height="63" alt="">
+     </a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+        <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
-         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-               <a class="nav-link" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="./About Handy.html">About Handy</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="jobsearch.html">Job Board</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="./postajob.html">Post a Job</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="./createprofile.html">Create a Profile</a>
-            </li>
-         
-            <li class="nav-item">
-               <a class="nav-link" href="./contact_us.html">Contact Us</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="Signup.html">Sign Up/Login</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="postajob.html">Post a Job</a>
-            </li>
+        <ul class="navbar-nav ml-auto">
+           <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+           </li>
+           <li class="nav-item">
+              <a class="nav-link" href="./About Handy.html">About Handy</a>
+           </li>
+           <li class="nav-item">
+              <a class="nav-link" href="jobsearch.html">Job Board</a>
+           </li>
+           <li class="nav-item">
+              <a class="nav-link" href="./postajob.html">Post a Job</a>
+           </li>
+           <li class="nav-item">
+              <a class="nav-link" href="./createprofile.html">Create a Profile</a>
+           </li>
 
-         </ul>
-         <form class="form-inline">
-            <input class="form-control sm-sm-1" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-      </div>
-   </nav>
+           <li class="nav-item">
+              <a class="nav-link" href="./contact_us.html">Contact Us</a>
+           </li>
+           <li class="nav-item">
+              <a class="nav-link" href="Signup.html">Sign Up/Login</a>
+           </li>
+           <li class="nav-item">
+              <a class="nav-link" href="postajob.html">Post a Job</a>
+           </li>
+        </ul>
+     </div>
+     <div class="dropdown">
+ <button onclick="myFunction()" class="dropbtn">User Button</button>
+ <div id="myDropdown" class="dropdown-content">
+   <a href="./profile.html">Profile</a>
+   <a href="./postBankInfo.html">Settings</a>
+   <a href="#contact">Help & Support</a>
+   <a href="#">Post a Job</a>
+   <a href="#">Manage Your Postings</a>
+   <a href="#">Logout</a>
+ </div>
+ </div>
+  </nav>
    <div>
       <br>
       <div class="d-flex-row">
@@ -86,11 +93,11 @@
                <h1 class="text-center">First Name</h1>
                <div class="form-group">
 
-                  
+
                   <input type="text" class="form-control" id="firstName" rows="3"></input>
                </div>
 
-                  
+
 
             </div>
             <div class="p-2">
@@ -98,7 +105,7 @@
                <div class="form-group">
 
                   <input class="form-control" id="lastName" rows="3"></input>
-                  
+
                </div>
 
             </div>
@@ -107,7 +114,7 @@
                <h1 class="text-center">Headline</h1>
                <div class="form-group">
                   <input class="form-control" id="headline" rows="3"></input>
-                  
+
                </div>
                <div class="p-2">
                   <h1 class="text-center">Biography</h1>
@@ -116,7 +123,7 @@
                   <div class="form-group">
 
                      <textarea class="form-control" id="biography" rows="3"></textarea>
-                     
+
                   </div>
 
                </div>
@@ -125,7 +132,7 @@
                   <div class="form-group">
 
                      <textarea class="form-control" id="experience" rows="3"></textarea>
-                     
+
                   </div>
 
                </div>
@@ -134,18 +141,18 @@
                   <div class="form-group">
 
                      <textarea class="form-control" id="references" rows="3"></textarea>
-                     
+
                   </div>
 
-                  
-               
+
+
                   </div>
                   <div class="container text-center py-3">
                      <img id="myPic" src="images/blah.jpg" width=50 height=50/>
                      <input type="file" accept="image/*" id="myProfPic"/>
              </div>
-             
-                
+
+
                   <div class="d-flex flex-row">
                      <div class="container text-center py-3">
                         <div class="text-center"><a class="btn btn-primary mt-3" id="yourProfile">Save Changes</a></div>
@@ -158,11 +165,11 @@
          </div>
       </div>
 
-      
 
 
 
-      
+
+
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
          integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
          </script>
@@ -173,7 +180,7 @@
       <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
       <script src="scripts/Handy_api_key.js"></script>
       <script src="./scripts/createprofilescript.js"></script>
-      
+
 </body>
 <!-- Footer -->
 
