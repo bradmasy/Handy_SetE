@@ -59,7 +59,7 @@ function getValues() {
             };
         } else {
             Bool = false;
-            console.log(Bool);
+
             return Bool;
         };
     };
@@ -88,19 +88,21 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
                         "jobID": Math.floor(Math.random() * 100000)
                     }
                 };
-                alert("Job has now been saved!");
+                db.collection("jobPostings")
+                    .get()
+                    .then(snap => {
+                        size = snap.size;
+                        size++;
+                        db.collection("jobPostings").doc("newJob_" + size).set(jobPost);
+                        console.log('worked');
+                    })
             }
-            db.collection("jobPostings")
-                .get()
-                .then(snap => {
-                    size = snap.size;
-                    size++;
-                    db.collection("jobPostings").doc("newJob_" + size).set(jobPost)
-                })
         });
 
     }
 })
+
+
 
 function yourJobs() {
     firebase.auth().onAuthStateChanged(firebaseUser => {
@@ -111,9 +113,7 @@ function yourJobs() {
                 .then(function (snap) {
                     snap.forEach(function (doc) {
                         let yourJob = document.getElementById("yourJobs")
-                        console.log(doc); name
                         var name = doc.data();
-                        console.log(name);
                         let ID = name.jobPost["jobID"];
                         var jobHeading = name.jobPost.Headline;
                         let div = document.createElement("div");
