@@ -1,5 +1,4 @@
 
-
 var province = document.getElementById("province").value;
 var nameE = document.getElementById("name").value;
 var street = document.getElementById("streetOrPOB").value;

@@ -1,8 +1,8 @@
 /*let HandyCache = "HandyCache";
 let Handy = [
     "./index.html",
-    "./handyIndex.js",
-    "./new-style-sheet.css",
+    "./scripts/handyIndex.js",
+    "./styles/new-style-sheet.css",
     "./" 
 ];
 // this function is saving all the files from artCache to the cache so that the program may run offline
@@ -39,5 +39,4 @@ self.addEventListener("fetch",function(event){
             })
     );
 });
-
 */

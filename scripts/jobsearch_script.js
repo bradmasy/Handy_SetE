@@ -13,7 +13,7 @@ db.collection("jobPostings").get().then(function (querySnapshot) {
     })
 })
 
-
+//Job Search Queries: getting the values from inputs to put into query
 button.addEventListener("click", function () {
     var city = document.getElementById("location").value;
     var jobTitle = document.getElementById("jobTitle").value;
@@ -28,7 +28,7 @@ button.addEventListener("click", function () {
     jobSearchSection.style.display="block";
 
     
-
+//Job Search Queries: taking values and comparing them to whats in
     function displayJobsField() {
         db.collection("jobPostings").where("jobPost.Field", "in", [field])
             .get()
@@ -124,6 +124,7 @@ button.addEventListener("click", function () {
 })
 
 
+//Hiding the Search Bar
 let toggleButton = document.getElementById("toggleButton");
 let addFormDisplay = true
 let searchForm = document.getElementById("jobForm");
@@ -144,6 +145,7 @@ toggleButton.addEventListener("click", function () {
 })
 
 
+//Finding the Jobs in the database and posting them to the Job Board
 db.collection("jobPostings")
     .get()
     .then(querySnapshot => {
@@ -168,7 +170,7 @@ db.collection("jobPostings")
             a.appendChild(div);
             console.log(div);
             jobSection.appendChild(a);
-            let br = document.createElement("br");
+            
         })
     })
 
@@ -177,7 +179,7 @@ function addLikeListener(id, likeid){
             .addEventListener("click", function(){
                 //when clicked do this
                 //increment the like counter
-                db.collection("webcams")
+                db.collection("jobPostings")
                 .doc(id)
                 .update({
                     likes: firebase.firestore.FieldValue.increment(1)

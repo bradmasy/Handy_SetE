@@ -6,7 +6,6 @@ function getLocation(){
 };
 function getBusiness(){
     let business = document.getElementById("business").value;
-    console.log(business);
     return business;
 };
 function getPosition(){
@@ -23,6 +22,7 @@ function getHeadline(){
     let headline = document.getElementById("headline").value;
     return headline
 }
+getHeadline();
 function getDesc(){
     let desc = document.getElementById("description").value;
     console.log(desc)
@@ -34,12 +34,35 @@ function getField(){
     return field;
 }
 
-var input = document.getElementsByTagName("input");
-console.log(input["headline"]);
-if(input["headline"] === " "){
-    console.log('no input');
-}
 
+var input = document.getElementsByTagName("input");
+
+
+function getValues(){
+    let button = document.getElementById("check")
+    button.addEventListener("click", function(){
+
+    alert("working");
+    let location = document.getElementById("location").value;
+    let business = document.getElementById("business").value;
+    let headline = document.getElementById("headline").value;
+    let desc = document.getElementById("description").value;
+    let field = document.getElementById("field").value;
+    let position = document.getElementById("position").value;
+    let salary = document.getElementById("salary").value;
+    var valueArray = [location,business,headline,desc, field, position, salary];
+    console.log(valueArray);
+    
+    for(i = 0; i < valueArray.length; i++){
+        var arrayVal = valueArray[i]
+        console.log(arrayVal);
+            if(arrayVal === " "){
+            console.log('no value')
+        }
+    }
+})
+}
+getValues()
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if(firebaseUser){
         var user = firebaseUser.uid
@@ -47,6 +70,9 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         let btn = document.getElementById("saveJob");
         btn.addEventListener("click", function(){
             alert("Job has now been saved!");
+            if(getHeadline()===""){
+                alert("no!");
+            } else{
                     var jobPost = {
                         "jobPost":{
                         "Description": getDesc(),
@@ -60,12 +86,12 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
                         "jobID": Math.floor(Math.random() * 100000)
                         }
                     };
+                }
                     db.collection("jobPostings")
                     .get()
                     .then(snap => {
                         size = snap.size;
                         size ++;
-                        console.log(size);
                         db.collection("jobPostings").doc("newJob_" + size).set(jobPost)
                     })
                     });
@@ -99,7 +125,6 @@ function yourJobs(){
                     butt.appendChild(buttPost);
                     div2.appendChild(butt);
                     div.appendChild(post);
-                    
                     a.appendChild(div);;
                     yourJob.appendChild(a);
                     
