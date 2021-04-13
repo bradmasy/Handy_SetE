@@ -1,66 +1,242 @@
 .card-img-top {
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
+width: 100%;
+height: 15vw;
+object-fit: cover;
 }
 
-
 .btn {
-    text-align: center;
+text-align: center;
 }
 
 .d-block{
-    opacity: 0.6;
+opacity: 0.6;
 }
-
-
 /* styling for abouthandy.html*/
 
-
 #about h1 {
-    font-size: 64px;
-    text-align: center;
+font-size: 64px;
+text-align: center;
 }
+
 h1 {
-    color: black;
-    margin-top: 5vh;
+color: black;
+margin-top: 5vh;
 }
 
 #empOremp {
-    height:75vh;
-    width:100%;
-    text-align: center;
+height:75vh;
+width:100%;
+text-align: center;
 }
 
 .spaced {
-    height: 10vh;
-    width: 100%;
+height: 10vh;
+width: 100%;
 }
 
 body {
-    height:200vh;
+height:200vh;
 }
 
 div img {
-    height: 10%;
+height: 10%;
 }
-
 /* styling for index */
 
 #coffee {
-    height: 300px!important;
-
+height: 300px!important;
 }
-.carousel-item {
-    margin-top: 50px;
 
+.carousel-item {
+margin-top: 50px;
 }
 
 .img-fluid {
-    height: 25vh;
-}
-.handyIndexImg {
-    
-    height: 25vh;
+height: 25vh;
 }
 
+.handyIndexImg {
+height: 25vh;
+}
+
+.footer-16371 {
+  padding: 10px 0;
+  font-family: "Poppins", sans-serif; }
+  .footer-16371 .footer-site-logo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900; }
+    .footer-16371 .footer-site-logo a {
+      color: #4b81c4; }
+  .footer-16371 .nav-links {
+    padding: 0;
+    margin: 0; }
+    .footer-16371 .nav-links li {
+      display: inline-block; }
+      .footer-16371 .nav-links li a {
+        padding: 10px;
+        color: #000; }
+        .footer-16371 .nav-links li a:hover {
+          color: #4200ff; }
+  .footer-16371 .social h3 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000; }
+  .footer-16371 .copyright {
+    color: #999999; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 10px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+
+  .job-card {
+    border-radius: 100px;
+    background-color: #002453;
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    color: white;
+  }
+
+  .job-card-programming {
+    border-radius: 100px;
+    background-color: #003c6f;
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    color: white;
+  }
+
+  .job-column {
+    float: left;
+    padding: 20px;
+    width: 33.33%;
+  }
+
+
+  .card {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #EF9A9A;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 5px;
+  }
+
+  .card-header {
+    color: #D32F2F;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid #EF9A9A;
+    background-color: #FFEBEE;
+    padding: 5px 10px;
+  }
+
+  .card-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  .material-icons {
+    font-size: 36px;
+    color: #D32F2F;
+    margin-bottom: 5px;
+  }
+
+  .main-description {
+    color: #D32F2F;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .white-space {
+    height: 50px;
+    padding: 20px;
+    border-radius: 50px;
+  }
+
+  .dropbtn {
+  background-color: #003c6f;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15%;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #4b81c4;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 300px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.whole-wrapper {
+  width: 60%;
+  margin: auto;
+}
+
+.huge-space {
+  height: 400px;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+.big-space {
+  height: 100px;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+.targetted-audience {
+  border: 3px solid #fff;
+  padding: 20px;
+}
+
+.intro {
+  width: 50%;
+  float: left;
+  padding: 20px;
+}
