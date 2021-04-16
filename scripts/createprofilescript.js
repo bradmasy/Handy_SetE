@@ -24,7 +24,7 @@ document.getElementById("yourProfile").addEventListener("click", function () {
                 db.collection("users").doc(user).update(profile)
                     .then(function () {
                         console.log("JSON created")
-                        
+
                     })
                 alert("Profile Updated!")
             }
@@ -32,51 +32,3 @@ document.getElementById("yourProfile").addEventListener("click", function () {
     }
     addJsonToCloud();
 })
-
-
-
-
-/*function showPic(){
-    const fileInput = document.getElementById("myProfPic");
-    const image = document.getElementById("myPic");
-    fileInput.addEventListener("change", function(pic){
-        var myPic = URL.createObjectURL(pic.target.files[0]);
-        image.src = myPic;
-    })
-}
-showPic();
-*/
-
-
-
-function uploadPicToCloud() {
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-            console.log(user)
-            var fileInput = document.getElementById("myProfPic");
-            const image = document.getElementById("myPic");
-            fileInput.addEventListener("change", function (pic) {
-                var myPic = pic.target.files[0];
-                var source = URL.createObjectURL(myPic);
-                image.src = source;
-                var storageRef = storage.ref("images/" + user.uid + ".jpg");
-                console.log(storageRef)
-                storageRef.put(myPic)
-                var id = user.uid;
-
-                storageRef.getDownloadURL()
-                    .then(function (url) {
-                        db.collection("users").doc(id).update({
-                            "profilePic": url
-                        })
-                            .then(function () {
-                                console.log("picture added to firestore");
-                            })
-                    });
-            })
-        } else {
-            // No user is signed in.
-        }
-    });
-};
-uploadPicToCloud();

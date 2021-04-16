@@ -3,69 +3,57 @@ let jobSection = document.getElementById("postedJobs");
 let jobSearchSection = document.getElementById("newJobPost");
 let jobForm = document.getElementById("jobForm");
 let reset = document.getElementById("reset");
-reset.style.display ="none";
+reset.style.display = "none";
 
-db.collection("jobPostings").get().then(function (querySnapshot) {
-    querySnapshot.forEach(doc => {
-        console.log(doc.id, "=>", doc.data()["jobPost"].jobID);
-        var you = doc.data()["jobPost"].jobID;
-        console.log(you);
-    })
-})
+
 
 //Job Search Queries: getting the values from inputs to put into query
 button.addEventListener("click", function () {
     var city = document.getElementById("location").value;
     var jobTitle = document.getElementById("jobTitle").value;
-    var jobTi= String(jobTitle)
-    console.log(jobTi);
     var salary = document.getElementById("salary").value;
     var field = document.getElementById("field").value;
-    console.log(field);
     jobSection.style.display = "none";
-    jobForm.style.display="none";
-    reset.style.display="block";
-    jobSearchSection.style.display="block";
+    jobForm.style.display = "none";
+    reset.style.display = "block";
+    jobSearchSection.style.display = "block";
 
-    
-//Job Search Queries: taking values and comparing them to whats in
+
+    //Job Search Queries: taking values and comparing them to whats in
     function displayJobsField() {
         db.collection("jobPostings").where("jobPost.Field", "in", [field])
             .get()
             .then(function (snap) {
                 snap.forEach(function (doc) {
-                    console.log(doc);
                     var name = doc.data();
-                    console.log(name);
                     let ID = name.jobPost["jobID"];
                     var jobHeading = name.jobPost.Headline;
                     let div = document.createElement("div");
                     let a = document.createElement("a");
                     a.href = "http://127.0.0.1:5502/Handy_SetE/yournewjob.html?id=" + ID;
-                        div.setAttribute("class", "jobPost");
+                    div.setAttribute("class", "jobPost");
                     let post = document.createTextNode(jobHeading);
                     div.appendChild(post);
                     a.appendChild(div);
                     jobSearchSection.appendChild(a);
-
                 });
             });
     }
     displayJobsField();
+
+    //functions getting data from jobpost in firebase
     function displayJobsLocation() {
         db.collection("jobPostings").where("jobPost.Location", "in", [city])
             .get()
             .then(function (snap) {
                 snap.forEach(function (doc) {
-                    console.log(doc);
                     var name = doc.data();
-                    console.log(name);
                     let ID = name.jobPost["jobID"];
                     var jobHeading = name.jobPost.Headline;
                     let div = document.createElement("div");
                     let a = document.createElement("a");
                     a.href = "http://127.0.0.1:5502/Handy_SetE/yournewjob.html?id=" + ID;
-                        div.setAttribute("class", "jobPost");
+                    div.setAttribute("class", "jobPost");
                     let post = document.createTextNode(jobHeading);
                     div.appendChild(post);
                     a.appendChild(div);
@@ -80,20 +68,17 @@ button.addEventListener("click", function () {
             .get()
             .then(function (snap) {
                 snap.forEach(function (doc) {
-                    console.log(doc);
                     var name = doc.data();
-                    console.log(name);
                     let ID = name.jobPost["jobID"];
                     var jobHeading = name.jobPost.Headline;
                     let div = document.createElement("div");
                     let a = document.createElement("a");
                     a.href = "http://127.0.0.1:5502/Handy_SetE/yournewjob.html?id=" + ID;
-                        div.setAttribute("class", "jobPost");
+                    div.setAttribute("class", "jobPost");
                     let post = document.createTextNode(jobHeading);
                     div.appendChild(post);
                     a.appendChild(div);
                     jobSearchSection.appendChild(a);
-
                 });
             });
     }
@@ -103,26 +88,22 @@ button.addEventListener("click", function () {
             .get()
             .then(function (snap) {
                 snap.forEach(function (doc) {
-                    console.log(doc);
                     var name = doc.data();
-                    console.log(name);
                     let ID = name.jobPost["jobID"];
                     var jobHeading = name.jobPost.Headline;
                     let div = document.createElement("div");
                     let a = document.createElement("a");
                     a.href = "http://127.0.0.1:5502/Handy_SetE/yournewjob.html?id=" + ID;
-                        div.setAttribute("class", "jobPost");
+                    div.setAttribute("class", "jobPost");
                     let post = document.createTextNode(jobHeading);
                     div.appendChild(post);
                     a.appendChild(div);
                     jobSearchSection.appendChild(a);
-
                 });
             });
     }
     displayJobsPosition();
 })
-
 
 //Hiding the Search Bar
 let toggleButton = document.getElementById("toggleButton");
@@ -130,7 +111,7 @@ let addFormDisplay = true
 let searchForm = document.getElementById("jobForm");
 searchForm.style.display = "none";
 
-
+//hiding the job form
 toggleButton.addEventListener("click", function () {
     let display = searchForm.style.display;
     if (display === "none") {
@@ -140,10 +121,8 @@ toggleButton.addEventListener("click", function () {
     else {
         document.getElementById("jobForm").style.display = "none";
         addFormDisplay = true;
-
     }
 })
-
 
 //Finding the Jobs in the database and posting them to the Job Board
 db.collection("jobPostings")
@@ -157,10 +136,10 @@ db.collection("jobPostings")
             let extraction1 = (data["Position"]);
             let extraction2 = (data["Location"]);
             let extraction3 = (data["Business"]);
-            let extraction4 = (data["Headline"]);
+            let extractionHeadline = (data["Headline"]);
             let extraction5 = (data["Salary"]);
             let id = (data["jobID"]);
-            let jobPost = extraction4;
+            let jobPost = extractionHeadline;
             let a = document.createElement("a");
             let b = document.createElement("button");
             console.log(b);
@@ -170,25 +149,12 @@ db.collection("jobPostings")
             a.appendChild(div);
             console.log(div);
             jobSection.appendChild(a);
-            
+
         })
     })
 
-function addLikeListener(id, likeid){
-            document.getElementById(likeid)
-            .addEventListener("click", function(){
-                //when clicked do this
-                //increment the like counter
-                db.collection("jobPostings")
-                .doc(id)
-                .update({
-                    likes: firebase.firestore.FieldValue.increment(1)
-                })
-            })
-}
-
-reset.addEventListener("click", function(){
-    reset.style.display="none";
-    jobSearchSection.innerHTML="";
-    jobSection.style.display="block";
+reset.addEventListener("click", function () {
+    reset.style.display = "none";
+    jobSearchSection.innerHTML = "";
+    jobSection.style.display = "block";
 })

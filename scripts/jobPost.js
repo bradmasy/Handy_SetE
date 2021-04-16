@@ -1,7 +1,6 @@
 
 function getLocation() {
     let location = document.getElementById("location").value;
-    console.log(location);
     return location;
 };
 function getBusiness() {
@@ -10,31 +9,24 @@ function getBusiness() {
 };
 function getPosition() {
     let position = document.getElementById("position").value;
-    console.log(position);
     return position;
 };
 function getSalary() {
     let salary = document.getElementById("salary").value;
-    console.log(salary);
     return salary;
 }
 function getHeadline() {
     let headline = document.getElementById("headline").value;
     return headline
 }
-getHeadline();
 function getDesc() {
     let desc = document.getElementById("description").value;
-    console.log(desc)
     return desc;
 }
-
 function getField() {
     let field = document.getElementById("field").value;
-    console.log(field)
     return field;
 }
-
 function getValues() {
     let location = document.getElementById("location").value;
     let business = document.getElementById("business").value;
@@ -44,11 +36,9 @@ function getValues() {
     let position = document.getElementById("position").value;
     let salary = document.getElementById("salary").value;
     var valueArray = [location, business, headline, desc, field, position, salary];
-    console.log(valueArray);
     var Bool = false;
     for (i = 0; i < valueArray.length; i++) {
         var arrayVal = valueArray[i];
-        console.log(arrayVal);
         if (arrayVal === "" && "Job Field") {
             console.log('error data not filled');
             Bool === false;
@@ -59,16 +49,14 @@ function getValues() {
             };
         } else {
             Bool = false;
-
             return Bool;
         };
     };
 }
-function jobID(){
+function jobID() {
     let num = Math.floor(Math.random() * 100000);
     return num
 }
-
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         var user = firebaseUser.uid;
@@ -107,9 +95,6 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
     }
 })
-
-
-
 function yourJobs() {
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
