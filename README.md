@@ -31,6 +31,8 @@ Edit log:
 - brad: working on job board/job forum/community js 03/31/2021 8:16am
 - brad: working on js for jobsearch and rendering customized job links, note: working currently on obtaining job id from a posting after its been queried on the drop down menu by field 03/31/2021 10:07pm
 - brad: working on js for yournewjob.js(delete function). working on css for job board page 04/07/2021 10:52pm
+-brad: cleaned scripts
+
 ## Technologies
 Technologies used for this project:
 * HTML, CSS
@@ -40,6 +42,8 @@ Technologies used for this project:
 
 ## Content
 Contents of the project folder:
+Images,Txt files, JavaScript, CSS and HTML for Handy Freelance Application
+
 
 ```
  Top level of project folder:
@@ -50,11 +54,11 @@ Contents of the project folder:
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
-    /blah.jpg                #
+    /images       #
 ├── scripts                  # Folder for scripts
-    /blah.js                 #
+    /scripts               #
 ├── styles                   # Folder for styles
-    /blah.css                #
+    /styles               #
 
 Firebase hosting files:
 ├── .firebaserc...
